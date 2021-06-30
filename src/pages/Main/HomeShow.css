@@ -1,14 +1,63 @@
 :root{
     --back-fondo: #EFFCF6;
+    --btn-color: #14919B;
+    --btn-color-hov: #0e767e;
+    --btn-color-sha: #09484d;
 }
 
 main{
     min-height: calc(100vh - 92px);
-    background-image: url('https://github.com/vlunaklick/shopping_cart/blob/main/src/images/Vector.svg');
+    background-image: url('/home/valen/the_odin_project/shopping_cart/src/images/Vector.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: block;
+    background-position: center;
 }
 
-.svgBg{
-    min-width: 100%;
-    min-height: 100%;
+.h3H{
+    margin: 0;
+    font-weight: 100;
+    color: var(--nav-col);
+    font-size: 1.563rem;
 }
+
+.bShop{
+    border-radius: 30px;
+    border: none;
+    width: 144px;
+    height: 48px;
+    margin-top: 1rem;
+    font-size: 0.938rem;
+    font-weight: 800;
+    background-color: var(--btn-color);
+    color: var(--back-fondo);
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.bShop:hover{
+    background-color: var(--btn-color-hov);
+    box-shadow: 0 0 5px var(--btn-color-sha);
+}
+
+
+.imgHome{
+    min-height: calc(100vh - 92px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.containerHome{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    min-height: calc(100vh - 92px);
+    justify-content: center;
+    align-items: center;
+}
+
 
