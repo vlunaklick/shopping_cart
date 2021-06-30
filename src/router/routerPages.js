@@ -3,6 +3,7 @@ import Navigator from "../components/Navigator";
 import React from "react";
 import HomeShow from "../pages/Main";
 import Error404 from "../pages/404 Error";
+import ShopMain from "../pages/Shop";
 
 export default function RouterPages(){
     return(
@@ -17,7 +18,7 @@ export default function RouterPages(){
                 </Route>
 
                 <Route exact path="/shop">
-                    <h1>Shop</h1>
+                    <ShopMain />
                 </Route>
 
                 <Route exact path="/checkout">

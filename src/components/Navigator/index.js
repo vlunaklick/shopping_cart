@@ -8,8 +8,8 @@ function Navigator(){
 
             <h1 className="titNav">Gaming Store</h1>
             <div className="moverNav">
-                <ul>
-                    <li>
+                <ul className="navAll">
+                    <li className="liName">
                         <Link to="/">
                             <div className="linkH" >
                                 <svg width="37" height="37" viewBox="0 0 37 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -19,7 +19,7 @@ function Navigator(){
                         </Link>
                     </li>
 
-                    <li>
+                    <li className="liName">
                         <Link to="/shop">
                             <div className="linkH" >
                                 SHOP
@@ -28,7 +28,7 @@ function Navigator(){
                         </Link>
                     </li>
 
-                    <li>
+                    <li className="liName">
                         <Link  to="/checkout">
                             <div className="linkH" >
                                 <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">

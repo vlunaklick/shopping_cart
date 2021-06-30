@@ -10,7 +10,7 @@ nav{
     background-color: var(--nav-bg);
 }
 
-ul{
+.navAll{
     display: flex;
     align-items: center;
     margin: 0;
@@ -23,11 +23,12 @@ a{
     color: var(--nav-col);
 }
 
-li{
+.liName{
     list-style: none;
     width: 100%;
     display: flex;
     justify-content: center;
+    
 }
 
 .titNav{
@@ -52,7 +53,7 @@ li{
     .titNav{
         text-align: center;
     }
-    li{
+    .liName{
         text-align: center;
     }
 }

@@ -1,0 +1,101 @@
+:root{
+    --color-top: #87EAF2;
+    --color-bot: #2cb1bc;
+    --color-btn: #E8E6E1;
+    --color-btn-hover: #c5c4bd;
+}
+
+.picTop{
+    width: 270px;
+    height: 270px;
+    background-color: var(--color-top);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.picBot{
+    width: 270px;
+    height: 52px;
+    background-color: var(--color-bot);
+    display: flex;
+    align-items: center;
+}
+
+
+.picIMG{
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+}
+
+.textBot{
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.5rem;
+    width: 100%;
+}
+
+.titBot,
+.priceBot{
+    margin: 0;
+    color: var(--nav-col);
+    font-weight: 300;
+}
+
+.titBot{
+    font-size: 1rem;
+}
+
+.priceBot{
+    font-size: 0.625rem;
+}
+
+.btnPreIzq{
+    width: 46px;
+    height: 29px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    background-color: var(--color-btn);
+    cursor: pointer;
+}
+
+.btnPreDer{
+    width: 46px;
+    height: 29px;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: var(--color-btn);
+    cursor: pointer;
+}
+
+.btnPreDer,
+.btnPreIzq{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnPre{
+    display: flex;
+    gap: 0.3rem;
+    justify-content: center;
+    width: 80%;
+}
+
+.btnPreDer:hover,
+.btnPreIzq:hover{
+    background-color: var(--color-btn-hover);
+}
+
+.svgBtn{
+    width: 14px;
+}
+
+@media (max-width: 620px) {
+    .target{
+        margin: 0;
+    }
+}
