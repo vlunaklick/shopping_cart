@@ -1,0 +1,41 @@
+:root{
+    --nav-col: #F0F4F8;
+    --nav-bg: #044E54;
+}
+
+nav{
+    display: flex;
+    padding: 0.72657rem;
+    background-color: var(--nav-bg);
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    width: 50%;
+}
+
+a{
+    text-decoration: none;
+    color: var(--nav-col);
+}
+
+li{
+    list-style: none;
+    width: 100%;
+}
+
+.titNav{
+    font-size: 3.125rem;
+    margin: 0;
+    width: 100%;
+    color: var(--nav-col);
+}
+
+.moverNav{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

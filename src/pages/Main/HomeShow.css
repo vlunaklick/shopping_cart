@@ -1,0 +1,14 @@
+:root{
+    --back-fondo: #EFFCF6;
+}
+
+main{
+    min-height: calc(100vh - 92px);
+    background-image: url('https://github.com/vlunaklick/shopping_cart/blob/main/src/images/Vector.svg');
+}
+
+.svgBg{
+    min-width: 100%;
+    min-height: 100%;
+}
+
