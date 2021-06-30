@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navigator from "../components/Navigator";
 import React from "react";
 import HomeShow from "../pages/Main";
+import Error404 from "../pages/404 Error";
 
 export default function RouterPages(){
     return(
@@ -24,7 +25,7 @@ export default function RouterPages(){
                 </Route>
 
                 <Route path="*">
-                    <h1>404 not found</h1>
+                    <Error404 />
                 </Route>
                 
             </Switch>

@@ -3,9 +3,10 @@
     --btn-color: #14919B;
     --btn-color-hov: #0e767e;
     --btn-color-sha: #09484d;
+    --target-btn: #c4c4c486;
 }
 
-main{
+.mainHo{
     min-height: calc(100vh - 92px);
     background-image: url('/home/valen/the_odin_project/shopping_cart/src/images/Vector.svg');
     background-repeat: no-repeat;
@@ -18,7 +19,7 @@ main{
     margin: 0;
     font-weight: 100;
     color: var(--nav-col);
-    font-size: 1.563rem;
+    font-size: 2.2rem;
 }
 
 .bShop{
@@ -33,6 +34,9 @@ main{
     color: var(--back-fondo);
     transition: 0.25s;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .bShop:hover{
@@ -58,6 +62,58 @@ main{
     min-height: calc(100vh - 92px);
     justify-content: center;
     align-items: center;
+}
+.imgSrc{
+    width: 550px;
+    transition: 1s;
+}
+
+.imgSrc:hover{
+    width: 575px;
+}
+
+@media (max-width: 1025px) {
+    .teH{
+        z-index: 1;
+    }
+    .textHome{
+        background-color: var(--target-btn);
+        padding: 0.5rem;
+    }
+    .imgP{
+        position: absolute;
+    }
+}
+
+@media (max-width: 1270px) {
+    .h3H{
+        font-size: 1.5rem;
+    }
+}
+
+
+@media (max-width: 750px) {
+    .teH{
+        z-index: 1;
+    }
+    .textHome{
+        background-color: var(--target-btn);
+        padding: 0.5rem;
+    }
+    .imgP{
+        position: absolute;
+    }
+    .imgSrc{
+        width: 300px;
+    }
+    .imgHome,
+    .containerHome,
+    main{
+        min-height: calc(100vh - 135px);
+    }
+    .h3H{
+        font-size: 1.25rem;
+    }
 }
 
 

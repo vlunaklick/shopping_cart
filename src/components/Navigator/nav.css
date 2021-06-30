@@ -1,6 +1,7 @@
 :root{
     --nav-col: #F0F4F8;
     --nav-bg: #044E54;
+    --nav-hov: #0000003d;
 }
 
 nav{
@@ -25,6 +26,8 @@ a{
 li{
     list-style: none;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .titNav{
@@ -52,4 +55,17 @@ li{
     li{
         text-align: center;
     }
+}
+
+
+.linkH{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    padding: 0.5rem;
+    transition: 0.2s;
+}
+.linkH:hover{
+    background-color: var(--nav-hov);
 }
