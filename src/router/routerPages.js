@@ -14,6 +14,12 @@ export default function RouterPages() {
 
     let [totalP, changeTot] = useState(0)
 
+    const resetAll = () => {
+        changeComp(objCompra)
+        changeTot(0)
+        changeCant(0)
+    }
+
     const addOneP = (id) => {
         changeComp((prevState) => {
             return { ...prevState, [id]: prevState[id] + 1 }
@@ -60,6 +66,7 @@ export default function RouterPages() {
                         totalP={totalP}
                         sumar={addOneP}
                         restar={resOneP}
+                        resetear={resetAll}
                     />
                 </Route>
 

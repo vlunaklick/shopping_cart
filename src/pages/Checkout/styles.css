@@ -1,7 +1,36 @@
+:root{
+    --check-btn: #e0e8f9;
+    --check-font: #000000;
+    --check-hov: #d8dff0;
+    --check-sha: #00000069;
+}
+
 .totS{
     margin: 0;
     text-align: right;
     margin-top: 1rem;
     margin-bottom: 2rem;
 
+}
+
+.bCheck{
+    border-radius: 30px;
+    border: none;
+    width: 144px;
+    height: 48px;
+    margin-top: 1rem;
+    font-size: 0.938rem;
+    font-weight: 800;
+    background-color: var(--check-btn);
+    color: var(--check-font);
+    transition: 0.25s;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bCheck:hover{
+    background-color: var(--check-hov);
+    box-shadow: 0 0 2px var(--check-sha);
 }

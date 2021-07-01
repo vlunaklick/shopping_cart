@@ -1,5 +1,6 @@
 import './styles.css'
 import TargetCheck from '../../components/TargetCheck'
+import { Link } from 'react-router-dom'
 
 export default function Checkout(props) {
     let tarjetasCheck = allComponents
@@ -15,6 +16,7 @@ export default function Checkout(props) {
                     cantiT={props.productos[item.nameU]}
                     sumar={props.sumar}
                     restar={props.restar}
+                    price={item.price}
                 />
             )
         })
@@ -24,10 +26,17 @@ export default function Checkout(props) {
             <main className="mainShop">
                 <div className="total">
                     <div className="izqPanel">
-                        <h4 className="titNavIzq">AMOUNT</h4>
+                        <h4 className="titNavIzq">SUBTOTAL</h4>
                         <h2 className="totS">
                             ${Math.floor(props.totalP * 100) / 100}
                         </h2>
+                        <Link
+                            to="/"
+                            className="bCheck"
+                            onClick={() => props.resetear()}
+                        >
+                            CHECKOUT
+                        </Link>
                     </div>
 
                     <div className="derPanel">{tarjetasCheck}</div>
@@ -40,7 +49,7 @@ export default function Checkout(props) {
 let allComponents = [
     {
         nameU: 'AMD Ryzen 5 3600',
-        price: 299.0,
+        price: 299.33,
         category: 'processor',
         image: 'https://www.amd.com/system/files/2019-06/238593-ryzen-5-pib-left-facing-1260x709.png',
     },

@@ -7,3 +7,33 @@
     justify-content: center;
     align-items: center;
 }
+
+.picBotPrice{
+    width: 270px;
+    height: 62px;
+    background-color: var(--color-bot);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.priceTit{
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--nav-col);
+}
+
+.priceP{
+    margin: 0;
+    margin-left: 0.5rem;
+    font-size: 0.6rem;
+}
+
+.toppingP{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--nav-col)
+}

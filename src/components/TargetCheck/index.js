@@ -7,7 +7,11 @@ export default function TargetCheck(props) {
                 <div className="picTop">
                     <img className="picIMG" src={props.image} alt="" />
                 </div>
-                <div className="picBot">
+                <div className="picBotPrice">
+                    <div className="toppingP">
+                        <h2 className="priceTit">{props.nameU}</h2>
+                        <p className="priceP">${props.price}</p>
+                    </div>
                     <div className="btnPre">
                         <div
                             className="btnPreIzq"
