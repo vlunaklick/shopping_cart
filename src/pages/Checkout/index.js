@@ -23,10 +23,10 @@ export default function Checkout(props) {
 
     return (
         <>
-            <main className="mainShop">
+            <main className="mainCheck">
                 <div className="total">
                     <div className="izqPanel">
-                        <h4 className="titNavIzq">SUBTOTAL</h4>
+                        <h4 className="titNavIzqc">SUBTOTAL</h4>
                         <h2 className="totS">
                             ${Math.floor(props.totalP * 100) / 100}
                         </h2>

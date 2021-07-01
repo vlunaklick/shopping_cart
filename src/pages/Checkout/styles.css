@@ -1,7 +1,7 @@
 :root{
     --check-btn: #e0e8f9;
     --check-font: #000000;
-    --check-hov: #d8dff0;
+    --check-hov: #d0d6e6;
     --check-sha: #00000069;
 }
 
@@ -10,7 +10,14 @@
     text-align: right;
     margin-top: 1rem;
     margin-bottom: 2rem;
+    color: var(--nav-col)
+}
 
+.titNavIzqc{
+    font-size: 1.875rem;
+    margin: 0;
+    text-decoration: underline;
+    color: var(--nav-col);
 }
 
 .bCheck{
@@ -33,4 +40,15 @@
 .bCheck:hover{
     background-color: var(--check-hov);
     box-shadow: 0 0 2px var(--check-sha);
+}
+
+
+.mainCheck{
+    display: flex;
+    min-height: calc(100vh - 92px);
+    background-image: url('../../images/Vector.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
 }
