@@ -3,4 +3,7 @@
     height: 29px;
     background-color: black;
     color: var(--nav-col);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

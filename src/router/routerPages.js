@@ -12,6 +12,8 @@ export default function RouterPages(){
 
     let [compP,changeComp] = useState(objCompra);
 
+    let [totalP,changeTot] = useState(0);
+
 
     const addOneP = (id) => {
         changeComp(prevState => {
@@ -57,7 +59,7 @@ export default function RouterPages(){
                 </Route>
 
                 <Route exact path="/checkout">
-                    <Checkout productos={compP} sumar={addOneP} restar={resOneP} />
+                    <Checkout productos={compP} totalP={totalP} sumar={addOneP} restar={resOneP} />
                 </Route>
 
                 <Route path="*">
