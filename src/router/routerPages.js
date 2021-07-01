@@ -56,8 +56,47 @@ export default function RouterPages() {
                     <HomeShow />
                 </Route>
 
-                <Route exact path="/shop">
-                    <ShopMain sumar={addOneP} restar={resOneP} />
+                <Route path="/shop">
+                    <Switch>
+                        <Route exact path="/shop">
+                            <ShopMain
+                                muestra="all"
+                                sumar={addOneP}
+                                restar={resOneP}
+                            />
+                        </Route>
+                        <Route exact path="/shop/motherboards">
+                            <ShopMain
+                                muestra="motherboards"
+                                sumar={addOneP}
+                                restar={resOneP}
+                            />
+                        </Route>
+                        <Route exact path="/shop/video_card">
+                            <ShopMain
+                                muestra="video_card"
+                                sumar={addOneP}
+                                restar={resOneP}
+                            />
+                        </Route>
+                        <Route exact path="/shop/processor">
+                            <ShopMain
+                                muestra="processor"
+                                sumar={addOneP}
+                                restar={resOneP}
+                            />
+                        </Route>
+                        <Route exact path="/shop/memory">
+                            <ShopMain
+                                muestra="memory"
+                                sumar={addOneP}
+                                restar={resOneP}
+                            />
+                        </Route>
+                        <Route path="*">
+                            <Error404 />
+                        </Route>
+                    </Switch>
                 </Route>
 
                 <Route exact path="/checkout">

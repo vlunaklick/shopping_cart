@@ -43,7 +43,10 @@
 .total{
     display: flex;
     justify-content: center;
+}
 
+.shopArt{
+    color: black;
 }
 
 @media (max-width: 830px) {

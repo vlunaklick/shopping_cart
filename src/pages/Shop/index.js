@@ -3,18 +3,37 @@ import { Link } from 'react-router-dom'
 import Target from '../../components/Target'
 
 export default function ShopMain(props) {
-    let tarjetas = allComponents.map(function (a) {
-        return (
-            <Target
-                key={a.nameU}
-                image={a.image}
-                nameU={a.nameU}
-                price={a.price}
-                sumar={props.sumar}
-                restar={props.restar}
-            />
-        )
-    })
+    let tarjetas = allComponents
+        .filter((item) => {
+            return item.category === props.muestra
+        })
+        .map(function (a) {
+            return (
+                <Target
+                    key={a.nameU}
+                    image={a.image}
+                    nameU={a.nameU}
+                    price={a.price}
+                    sumar={props.sumar}
+                    restar={props.restar}
+                />
+            )
+        })
+
+    if (props.muestra === 'all') {
+        tarjetas = allComponents.map(function (a) {
+            return (
+                <Target
+                    key={a.nameU}
+                    image={a.image}
+                    nameU={a.nameU}
+                    price={a.price}
+                    sumar={props.sumar}
+                    restar={props.restar}
+                />
+            )
+        })
+    }
     return (
         <>
             <main className="mainShop">
@@ -22,10 +41,29 @@ export default function ShopMain(props) {
                     <div className="izqPanel">
                         <h4 className="titNavIzq">PRODUCTS</h4>
                         <ul className="downU">
-                            <li className="liU">Memory</li>
-                            <li className="liU">Motherboards</li>
-                            <li className="liU">Video Card</li>
-                            <li className="liU">Processors</li>
+                            <li className="liU">
+                                <Link className="shopArt" to="/shop/memory">
+                                    Memory
+                                </Link>
+                            </li>
+                            <li className="liU">
+                                <Link
+                                    className="shopArt"
+                                    to="/shop/motherboards"
+                                >
+                                    Motherboards
+                                </Link>
+                            </li>
+                            <li className="liU">
+                                <Link className="shopArt" to="/shop/video_card">
+                                    Video Card
+                                </Link>
+                            </li>
+                            <li className="liU">
+                                <Link className="shopArt" to="/shop/processor">
+                                    Processors
+                                </Link>
+                            </li>
                         </ul>
                     </div>
 
