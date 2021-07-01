@@ -2,6 +2,7 @@
     --nav-col: #F0F4F8;
     --nav-bg: #044E54;
     --nav-hov: #0000003d;
+    --color-check: #043a3f;
 }
 
 nav{
@@ -31,12 +32,33 @@ a{
     
 }
 
+.cantidad{
+    background-color: var(--color-check);
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    border-radius: 30px;
+    color: var(--nav-col);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.2rem;
+    font-size: 0.7rem;
+}
+
 .titNav{
     font-size: 3.125rem;
     margin: 0;
     width: 100%;
     color: var(--nav-col);
     font-weight: 700;
+    margin-left: 2rem;
+}
+
+.che{
+    display: flex;
+    align-items: center;
 }
 
 .moverNav{
@@ -52,6 +74,7 @@ a{
     }
     .titNav{
         text-align: center;
+        margin: 0;
     }
     .liName{
         text-align: center;
