@@ -17,7 +17,7 @@ export default function TargetCheck(props){
                         </div>
 
                         <div className="cantMid">
-                            <p>{props.cantiT}</p>
+                            <p className="pCan">{props.cantiT}</p>
                         </div>
 
                         <div className="btnPreDer" onClick={() => props.sumar(props.nameU)} >

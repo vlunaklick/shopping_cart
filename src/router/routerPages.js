@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Navigator from "../components/Navigator";
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import HomeShow from "../pages/Main";
 import Error404 from "../pages/404 Error";
@@ -15,16 +15,13 @@ export default function RouterPages(){
     let [totalP,changeTot] = useState(0);
 
 
-    const addOneP = (id) => {
+    const addOneP =  (id) => {
         changeComp(prevState => {
             return { ...prevState, [id]: prevState[id] + 1 };
         })
-        changeCant(() => {
-            return Object.values(compP).reduce((t, n) => t + n,1);
-        })
     }
     
-    const resOneP = async (id) => {
+    const resOneP =  (id) => {
         changeComp(prevState => {
             if (prevState[id] === 0) {
                 return { ...prevState };
@@ -32,15 +29,18 @@ export default function RouterPages(){
                 return { ...prevState, [id]: prevState[id] - 1 };
             }
         });
-        changeCant(prevState => {
-            if (prevState === 0) {
-                return prevState ;
-            } else {
-                return Object.values(compP).reduce((t, n) => t + n, -1);
-            }
-            
-        });
     }
+
+    useEffect(()=>{
+        changeCant(prevState => {
+            return Object.values(compP).reduce((t, n) => t + n);
+        })
+        changeTot(() => {
+            return Object.entries(compP).reduce((final, item) => {
+                return final + (objCompraPrecios[item[0]] * item[1]);
+            }, 0);
+        })
+    },[compP]);
 
 
     return(
@@ -88,4 +88,20 @@ let objCompra = {
     "Intel I5 10400F": 0,
     "GIGABYTE RX 570": 0,
     "AMD Ryzen 5 3600": 0,
+}
+
+let objCompraPrecios = {
+    "AMD Ryzen 3 1200": 259.99,
+    "GTX 1070": 149.99,
+    "GIGABYTE Z77X": 299.99,
+    "ROG STRIX Z490": 49.99,
+    "Crucial memo 8GB": 99.99,
+    "ASUS DUAL RX580": 134.99,
+    "Intel I5 8260U": 200.5,
+    "GTX 1060": 70,
+    "GeForce GTX 1650": 200,
+    "MSI Fake City": 175,
+    "Intel I5 10400F": 150,
+    "GIGABYTE RX 570": 90,
+    "AMD Ryzen 5 3600": 299.00,
 }
