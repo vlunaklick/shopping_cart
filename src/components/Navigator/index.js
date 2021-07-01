@@ -8,7 +8,7 @@ function Navigator(props) {
             <div className="moverNav">
                 <ul className="navAll">
                     <li className="liName">
-                        <Link to="/">
+                        <Link to="/shopping_cart/">
                             <div className="linkH">
                                 <svg
                                     width="37"

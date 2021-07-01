@@ -52,7 +52,7 @@ export default function RouterPages() {
             <Navigator cant={cantP} />
 
             <Switch>
-                <Route exact path="/">
+                <Route exact path="/shopping_cart/">
                     <HomeShow />
                 </Route>
 
