@@ -1,13 +1,11 @@
-
-import './App.css';
-import RouterPages from './router/routerPages';
+import RouterPages from './router/routerPages'
 
 function App() {
-  return (
-    <>
-      <RouterPages />
-    </>
-  );
+    return (
+        <>
+            <RouterPages />
+        </>
+    )
 }
 
-export default App;
+export default App
