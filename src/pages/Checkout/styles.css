@@ -52,3 +52,9 @@
     background-position: center;
     padding: 2rem;
 }
+
+@media (max-width: 830px){
+    .mainCheck{
+        display: block;
+    }
+}
