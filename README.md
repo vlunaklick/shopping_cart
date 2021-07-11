@@ -3,7 +3,7 @@
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
-> In this project i tried to create a "Shopping Cart". It was created using React and trying to implement the library Router.
+> In this project I created a "Shopping Cart". It was created using React and trying to implement the library Router.
 
 ### ✨ [Live View](https://vlunaklick.github.io/shopping_cart/)
 
