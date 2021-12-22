@@ -32,9 +32,7 @@ function Navigator(props) {
 								</svg>
 							</div>
 						</Link>
-						<div className='cantidad'>
-							<p>{props.cant}</p>
-						</div>
+						<div className='cantidad'>{props.cant}</div>
 					</li>
 				</ul>
 			</div>

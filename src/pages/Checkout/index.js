@@ -46,7 +46,7 @@ export default function Checkout(props) {
 							tarjetasCheck
 						)}
 					</div>
-					<GoUp />
+					{tarjetasCheck.length > 1 ? <GoUp /> : ''}
 				</div>
 			</main>
 		</>

@@ -104,7 +104,7 @@ export default function ShopMain(props) {
 					</div>
 
 					<div className='derPanel'>{tarjetas}</div>
-					<GoUp />
+					{tarjetas.length > 1 ? <GoUp /> : ''}
 				</div>
 			</main>
 		</>
