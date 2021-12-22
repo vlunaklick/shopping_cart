@@ -19,7 +19,7 @@
 
 .flechaL{
     transform: rotate(-90deg);
-    color: white;
+    fill: white;
 }
 
 .goUpB:hover{

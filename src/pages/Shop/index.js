@@ -47,7 +47,7 @@ export default function ShopMain(props) {
 						<div className='products'>
 							<h4 className='titNavIzqc'>PRODUCTS</h4>
 							<div className='menuI' onClick={() => setClickeado(!clickeado)}>
-								<svg viewBox='0 0 100 80' width='40' height='40'>
+								<svg viewBox='0 0 100 80' width='25' height='25'>
 									<rect width='100' height='20'></rect>
 									<rect y='30' width='100' height='20'></rect>
 									<rect y='60' width='100' height='20'></rect>
