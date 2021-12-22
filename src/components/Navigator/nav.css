@@ -71,7 +71,7 @@ a{
         flex-direction: column;
         position:sticky;
         width: 100%;
-        z-index: 1;
+        z-index: 2;
         padding: 0.72657rem 0 ;
         top: 0;
     }
