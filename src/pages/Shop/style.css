@@ -1,21 +1,32 @@
+:root{
+    --calculo: calc(100vh - 92.2667px);
+    --izq-panel: #14919B;
+    --hover-pan:#128088;
+    --title:#0f6a70;
+}
+
+
 .mainShop{
-    margin: 1rem auto 0 auto;
     display: flex;
+    min-height: var(--calculo);
+    height: 100%;
 }
 
 
 .titNavIzq{
     font-size: 1.875rem;
     margin: 0;
-    text-decoration: underline;
+    padding: 1rem 2rem 1rem 2rem;
+    background-color: var(--title);
+    text-align: center;
 }
 
 
 .izqPanel{
     display: flex;
     flex-direction: column;
-    margin-left: 4rem;
-    margin-right: 1rem;
+    background-color: var(--izq-panel);
+    min-width: 300px;
 }
 
 .derPanel{
@@ -23,38 +34,96 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
+    padding: 1rem;
+    width: 100%;
 }
 
 .downU{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0;
+    width: 100%;
     padding: 0;
+    margin: 0;
 }
 
 .liU{
-    text-align: right;
-    display: block;
+    text-align: center;
+    display: flex;
     line-height: 2rem;
     cursor: pointer;
+    list-style: none;
+    justify-content: center;
 }
 
 .total{
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .shopArt{
     color: black;
+    padding: 0.75rem 0.25rem;
+    width: 100%;
+}
+
+.active{
+    color: white;
+    background-color: var(--hover-pan)
+}
+
+.titNavIzqc{
+    margin: 0;
+}
+
+
+.liU:hover{
+    background-color: var(--hover-pan);
+}
+
+.products{
+    display: flex;
+    font-size: 1.875rem;
+    margin: 0;
+    padding: 1rem 2rem;
+    background-color: var(--title);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap:2rem
+}
+
+.menuI{
+    display: none;
+}
+.show{
+    display:flex;
 }
 
 @media (max-width: 830px) {
+    .downU{
+        position: absolute;
+        left: -100%;
+        transition: all 0.5s ease;
+        top: 216.07px;
+        opacity: 1;
+        z-index: 1;
+    }
+    .show{
+        left: 0;
+        opacity: 1;
+    }
+    .menuI{
+        display: flex;
+        cursor: pointer;
+    }
+    .products{
+        width: 100%;
+        padding: 1rem 0 ;
+    }
     .total{
         flex-direction: column;
-    }
-    .downU{
-        margin-bottom: .7rem;
     }
     .izqPanel{
         margin: 0;
@@ -64,8 +133,26 @@
     }
     .liU{
         text-align: center;
+        width: 100%;
     }
     .mainShop{
         display: block;
+    }
+    .titNavIzq{
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+    }
+    .derPanel{
+        width: auto;
+    }
+    .shopArt{
+        background-color: var(--izq-panel);
+    }
+    .active{
+        background-color: var(--hover-pan);
+    }
+    .shopArt:hover{
+        background-color: var(--hover-pan);
     }
 }

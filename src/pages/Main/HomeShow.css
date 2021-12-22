@@ -51,6 +51,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 594.75px;
 }
 
 
@@ -62,9 +63,11 @@
     justify-content: center;
     align-items: center;
 }
+
 .imgSrc{
     width: 550px;
     transition: 1s;
+    position:fixed;
 }
 
 .imgSrc:hover{
@@ -81,6 +84,15 @@
     }
     .imgP{
         position: absolute;
+    }
+    .imgHome{
+        width: 100%;
+    }
+    .imgSrc{
+        position:absolute;
+    }
+    .mainHo{
+        min-height: 0;
     }
 }
 

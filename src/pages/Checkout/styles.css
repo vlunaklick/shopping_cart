@@ -8,24 +8,18 @@
 .totS{
     margin: 0;
     text-align: right;
-    margin-top: 1rem;
+    margin-top: 2rem;
     margin-bottom: 2rem;
-    color: var(--nav-col)
+    color: var(--nav-col);
+    text-align: center;
 }
 
-.titNavIzqc{
-    font-size: 1.875rem;
-    margin: 0;
-    text-decoration: underline;
-    color: var(--nav-col);
-}
 
 .bCheck{
     border-radius: 30px;
     border: none;
     width: 144px;
     height: 48px;
-    margin-top: 1rem;
     font-size: 0.938rem;
     font-weight: 800;
     background-color: var(--check-btn);
@@ -42,19 +36,42 @@
     box-shadow: 0 0 2px var(--check-sha);
 }
 
+.centrarChecker{
+    display: flex;
+    justify-content: center;
+}
+
 
 .mainCheck{
     display: flex;
     min-height: calc(100vh - 92px);
-    background-image: url('../../images/Vector.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding: 2rem;
+}
+.noItem{
+    margin: 0;
+    font-size: 7rem;
+    text-align: center;
+}
+.noItemM{
+    margin: 0;
+    text-align: center;
+}
+.messageNo{
+    display: flex;
+    flex-direction: column;
 }
 
 @media (max-width: 830px){
     .mainCheck{
         display: block;
+        min-height: 0;
+    }
+    .bCheck{
+        margin-bottom: 1rem;
+    }
+    .noItem{
+        font-size: 4rem;
+    }
+    .noItemM{
+        font-size: 1rem;
     }
 }
