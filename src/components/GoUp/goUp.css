@@ -1,0 +1,27 @@
+:root{
+    --botton: #0d5b61;
+    --botton-hover: #0a4549;
+}
+
+.goUpB{
+    background-color: var(--botton);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: fixed;
+    padding: 0.5rem;
+    bottom: 0;
+    right: 0;
+    transform: translate(-45%, -60%);
+    cursor: pointer;
+}
+
+.flechaL{
+    transform: rotate(-90deg);
+    color: white;
+}
+
+.goUpB:hover{
+    background-color: var(--botton-hover);
+}

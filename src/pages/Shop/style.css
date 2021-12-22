@@ -137,6 +137,7 @@
     }
     .mainShop{
         display: block;
+        min-height: calc(100vh - 145.267px);
     }
     .titNavIzq{
         width: 100%;

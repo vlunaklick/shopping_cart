@@ -2,6 +2,7 @@ import './style.css'
 import { NavLink } from 'react-router-dom'
 import Target from '../../components/Target'
 import { useState } from 'react'
+import GoUp from '../../components/GoUp'
 
 export default function ShopMain(props) {
 	let tarjetas = allComponents
@@ -103,6 +104,7 @@ export default function ShopMain(props) {
 					</div>
 
 					<div className='derPanel'>{tarjetas}</div>
+					<GoUp />
 				</div>
 			</main>
 		</>

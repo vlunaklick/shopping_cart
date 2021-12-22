@@ -69,6 +69,11 @@ a{
 @media (max-width: 740px) {
     nav{
         flex-direction: column;
+        position:sticky;
+        width: 100%;
+        z-index: 1;
+        padding: 0.72657rem 0 ;
+        top: 0;
     }
     .titNav{
         text-align: center;

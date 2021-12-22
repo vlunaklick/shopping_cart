@@ -1,6 +1,7 @@
 import './styles.css'
 import TargetCheck from '../../components/TargetCheck'
 import { Link } from 'react-router-dom'
+import GoUp from '../../components/GoUp'
 
 export default function Checkout(props) {
 	let tarjetasCheck = allComponents
@@ -45,6 +46,7 @@ export default function Checkout(props) {
 							tarjetasCheck
 						)}
 					</div>
+					<GoUp />
 				</div>
 			</main>
 		</>
