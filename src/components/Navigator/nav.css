@@ -7,7 +7,7 @@
 
 nav{
     display: flex;
-    padding: 0.72657rem;
+    padding: 0.4rem 0.72657rem;
     background-color: var(--nav-bg);
 }
 
@@ -17,6 +17,8 @@ nav{
     margin: 0;
     width: 100%;
     padding: 0;
+    justify-content: right;
+    gap: 0.5rem;
 }
 
 a{
@@ -26,10 +28,9 @@ a{
 
 .liName{
     list-style: none;
-    width: 100%;
     display: flex;
     justify-content: center;
-    
+    align-items: center;
 }
 
 .cantidad{
@@ -45,12 +46,14 @@ a{
 }
 
 .titNav{
-    font-size: 3.125rem;
+    font-size: 1.5rem;
     margin: 0;
     width: 100%;
     color: var(--nav-col);
     font-weight: 700;
     margin-left: 2rem;
+    display: flex;
+    align-items: center;
 }
 
 .che{
@@ -61,7 +64,7 @@ a{
 .moverNav{
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
 }
 
