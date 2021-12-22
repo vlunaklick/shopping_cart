@@ -4,27 +4,11 @@ import './nav.css'
 function Navigator(props) {
 	return (
 		<nav>
-			<h1 className='titNav'>Gaming Store</h1>
+			<Link to='/shopping_cart/' className='titNav'>
+				Gaming Store
+			</Link>
 			<div className='moverNav'>
 				<ul className='navAll'>
-					<li className='liName'>
-						<Link to='/shopping_cart/'>
-							<div className='linkH'>
-								<svg
-									width='37'
-									height='37'
-									viewBox='0 0 37 37'
-									fill='none'
-									xmlns='http://www.w3.org/2000/svg'>
-									<path
-										d='M15.4167 30.8333V21.5833H21.5833V30.8333H29.2917V18.5H33.9167L18.5 4.625L3.08334 18.5H7.70834V30.8333H15.4167Z'
-										fill='#F0F4F8'
-									/>
-								</svg>
-							</div>
-						</Link>
-					</li>
-
 					<li className='liName'>
 						<Link to='/shop/all'>
 							<div className='linkH'>SHOP</div>
@@ -35,8 +19,9 @@ function Navigator(props) {
 						<Link to='/checkout'>
 							<div className='linkH'>
 								<svg
-									width='36'
-									height='36'
+									width='25'
+									height='25'
+									className='svgL'
 									viewBox='0 0 36 36'
 									fill='none'
 									xmlns='http://www.w3.org/2000/svg'>
