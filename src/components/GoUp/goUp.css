@@ -15,6 +15,9 @@
     right: 0;
     transform: translate(-45%, -60%);
     cursor: pointer;
+    -webkit-box-shadow: rgba(0,0,0,0.8) 0px 0 2px;
+    -moz-box-shadow: rgba(0,0,0,0.8) 0 0 2px;
+    box-shadow: rgba(0,0,0,0.8) 0 0 2px;
 }
 
 .flechaL{
@@ -24,4 +27,8 @@
 
 .goUpB:hover{
     background-color: var(--botton-hover);
+}
+
+.goUpB:active{
+    transform: scale(1rem , 1rem);
 }
