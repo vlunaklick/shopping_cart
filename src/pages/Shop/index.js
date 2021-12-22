@@ -58,6 +58,7 @@ export default function ShopMain(props) {
 								<NavLink
 									className='shopArt'
 									to='/shop/all'
+									onClick={() => setClickeado(!clickeado)}
 									activeClassName='active'>
 									All
 								</NavLink>
@@ -66,6 +67,7 @@ export default function ShopMain(props) {
 								<NavLink
 									className='shopArt'
 									to='/shop/memory'
+									onClick={() => setClickeado(!clickeado)}
 									activeClassName='active'>
 									Memory
 								</NavLink>
@@ -74,6 +76,7 @@ export default function ShopMain(props) {
 								<NavLink
 									className='shopArt'
 									to='/shop/motherboards'
+									onClick={() => setClickeado(!clickeado)}
 									activeClassName='active'>
 									Motherboards
 								</NavLink>
@@ -82,6 +85,7 @@ export default function ShopMain(props) {
 								<NavLink
 									className='shopArt'
 									to='/shop/video_card'
+									onClick={() => setClickeado(!clickeado)}
 									activeClassName='active'>
 									Video Card
 								</NavLink>
@@ -90,6 +94,7 @@ export default function ShopMain(props) {
 								<NavLink
 									className='shopArt'
 									to='/shop/processor'
+									onClick={() => setClickeado(!clickeado)}
 									activeClassName='active'>
 									Processors
 								</NavLink>
