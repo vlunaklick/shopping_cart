@@ -26,7 +26,7 @@ export default function Checkout(props) {
 		<>
 			<main className='mainCheck'>
 				<div className='total'>
-					<div className='izqPanel'>
+					<div className='izqPanel bordeizq'>
 						<h4 className='titNavIzq'>SUBTOTAL</h4>
 						<h2 className='totS'>${Math.floor(props.totalP * 100) / 100}</h2>
 						<div className='centrarChecker'>

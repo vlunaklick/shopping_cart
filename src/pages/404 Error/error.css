@@ -1,6 +1,11 @@
+:root{
+    --error: #EFFCF6;
+    --font-error: #000;
+}
+
 .error404{
-    background-color: var(--nav-bg);
-    min-height: calc(100vh - 92px);
+    background-color: var(--error);
+    min-height: calc(100vh - 93px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,7 +15,7 @@
 .titError,
 .pError{
     margin: 0;
-    color: var(--nav-col);
+    color: var(--font-error);
 }
 
 .titError{
@@ -19,4 +24,5 @@
 
 .pError{
     font-size: 2rem;
+    text-align: center;
 }
