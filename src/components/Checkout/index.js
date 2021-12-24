@@ -1,7 +1,7 @@
 import './styles.css'
-import TargetCheck from '../../components/TargetCheck'
+import TargetCheck from '../TargetCheck'
 import { Link } from 'react-router-dom'
-import GoUp from '../../components/GoUp'
+import GoUp from '../GoUp'
 
 export default function Checkout(props) {
 	let tarjetasCheck = allComponents
@@ -24,19 +24,25 @@ export default function Checkout(props) {
 
 	return (
 		<>
-			<main className='mainCheck'>
+			<main className={props.valor ? 'mainCheck caTivo' : 'mainCheck'}>
 				<div className='total'>
 					<div className='izqPanel'>
-						<h4 className='titNavIzq'>SUBTOTAL</h4>
-						<h2 className='totS'>${Math.floor(props.totalP * 100) / 100}</h2>
-						<div className='centrarChecker'>
-							<Link to='/' className='bCheck' onClick={() => props.resetear()}>
-								CHECKOUT
-							</Link>
+						<div className='titNavIzq titNavC'>
+							<h4 className='totalD'>TOTAL</h4>
+							<svg
+								onClick={() => props.cambiar()}
+								className='crossC'
+								xmlns='http://www.w3.org/2000/svg'
+								width='24'
+								height='24'
+								viewBox='0 0 24 24'>
+								<path d='M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z' />
+							</svg>
 						</div>
+						<h2 className='totS'>${Math.floor(props.totalP * 100) / 100}</h2>
 					</div>
 
-					<div className='derPanel'>
+					<div className='derPanell mover'>
 						{tarjetasCheck.length === 0 ? (
 							<div className='messageNo'>
 								<h1 className='noItem'>Sorry!</h1>
@@ -47,6 +53,15 @@ export default function Checkout(props) {
 						)}
 					</div>
 					{tarjetasCheck.length > 1 ? <GoUp /> : ''}
+					{tarjetasCheck.length > 0 ? (
+						<div className='centrarChecker'>
+							<Link to='/' className='bCheck' onClick={() => props.resetear()}>
+								CHECKOUT
+							</Link>
+						</div>
+					) : (
+						''
+					)}
 				</div>
 			</main>
 		</>

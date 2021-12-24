@@ -15,7 +15,7 @@
 .titNavIzq{
     font-size: 1.2rem;
     margin: 0;
-    padding: 1rem 2rem 1rem 2rem;
+    padding: 0.5rem 1rem;
     background-color: var(--title);
     text-align: center;
     color: white;
@@ -58,12 +58,7 @@
     justify-content: center;
 }
 
-.total{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    flex-direction: column;
-}
+
 
 .shopArt{
     color: white;
@@ -136,9 +131,6 @@
         z-index: 2;
         display: flex;
     }
-    .total{
-        flex-direction: column;
-    }
     .izqPanel{
         margin: 0;
         justify-content: center;
@@ -158,9 +150,6 @@
         text-align: center;
         padding: 0.6rem 0;
         font-size: 1rem;
-    }
-    .derPanel{
-        width: auto;
     }
     .shopArt{
         background-color: var(--izq-panel);

@@ -1,19 +1,34 @@
 :root{
-    --check-btn: #e0e8f9;
+    --check-btn: #d2ddf7;
     --check-font: #000000;
-    --check-hov: #d0d6e6;
+    --check-hov: #b9c0d3;
     --check-sha: #00000069;
+    --Check-f: #deebe5;
 }
 
 .totS{
     margin: 0;
     text-align: right;
-    padding: 1rem;
+    padding: 0.635rem;
     color: var(--nav-col);
     text-align: center;
     font-size: 1rem;
 }
 
+.titNavC{
+    display: flex;
+    justify-content: center;
+}
+
+.mover{
+    overflow-x: scroll;
+}
+
+.total{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
 
 .bCheck{
     border-radius: 30px;
@@ -36,15 +51,37 @@
     box-shadow: 0 0 2px var(--check-sha);
 }
 
+.crossC{
+    position: absolute;
+    transform: translate(900%);
+    cursor: pointer;
+    fill: #fff;
+}
+
+.totalD{
+    margin: 0;
+}
+
 .centrarChecker{
     display: flex;
     justify-content: center;
+    padding: 0 0 0 1rem;
 }
 
 
 .mainCheck{
-    display: flex;
-    min-height: calc(100vh - 53.8px);
+    display: none;
+    min-height: calc(100vh);
+    height: 100%;
+    width: 500px;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    z-index: 4;
+    background-color: var(--Check-f);
+    box-shadow: -4px 0px 5px -5px rgba(0,0,0,1);
+    transition: all 0.75s ease;
+    opacity: 1;
 }
 .noItem{
     margin: 0;
@@ -60,10 +97,33 @@
     flex-direction: column;
 }
 
+.caTivo{
+    right: 0%;
+    opacity: 1;
+    display: flex;
+}
+
+.derPanell{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem 0;
+    width: 100%;
+    max-height: 45.5rem;
+}
+
 @media (max-width: 830px){
+    .derPanell{
+        max-height: 38rem; 
+    }
     .mainCheck{
         display: block;
         min-height: 0;
+        width: 320px;
+    }
+    .crossC{
+        transform: translate(500%);
     }
     .bCheck{
         margin-bottom: 1rem;
@@ -79,5 +139,12 @@
     }
     .totS{
         font-size: 1rem;
+    }
+    .mover{
+        overflow-x: scroll;
+    }
+    .centrarChecker{
+        position: fixed;
+        transform: translate(80%, 1480%);
     }
 }

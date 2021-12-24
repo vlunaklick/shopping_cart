@@ -39,6 +39,11 @@ export default function ShopMain(props) {
 
 	const [clickeado, setClickeado] = useState(false)
 
+	const clickear = () => {
+		setClickeado(!clickeado)
+		props.cerrar()
+	}
+
 	return (
 		<>
 			<main className='mainShop'>
@@ -46,7 +51,7 @@ export default function ShopMain(props) {
 					<div className='izqPanel'>
 						<div className='products'>
 							<h4 className='titNavIzqc'>PRODUCTS</h4>
-							<div className='menuI' onClick={() => setClickeado(!clickeado)}>
+							<div className='menuI' onClick={() => clickear()}>
 								<svg viewBox='0 0 100 80' width='25' height='25'>
 									<rect width='100' height='20'></rect>
 									<rect y='30' width='100' height='20'></rect>
@@ -59,7 +64,7 @@ export default function ShopMain(props) {
 								<NavLink
 									className='shopArt'
 									to='/shop/all'
-									onClick={() => setClickeado(!clickeado)}
+									onClick={() => clickear()}
 									activeClassName='active'>
 									All
 								</NavLink>
@@ -68,7 +73,7 @@ export default function ShopMain(props) {
 								<NavLink
 									className='shopArt'
 									to='/shop/memory'
-									onClick={() => setClickeado(!clickeado)}
+									onClick={() => clickear()}
 									activeClassName='active'>
 									Memory
 								</NavLink>
@@ -77,7 +82,7 @@ export default function ShopMain(props) {
 								<NavLink
 									className='shopArt'
 									to='/shop/motherboards'
-									onClick={() => setClickeado(!clickeado)}
+									onClick={() => clickear()}
 									activeClassName='active'>
 									Motherboards
 								</NavLink>
@@ -86,7 +91,7 @@ export default function ShopMain(props) {
 								<NavLink
 									className='shopArt'
 									to='/shop/video_card'
-									onClick={() => setClickeado(!clickeado)}
+									onClick={() => clickear()}
 									activeClassName='active'>
 									Video Card
 								</NavLink>
@@ -95,7 +100,7 @@ export default function ShopMain(props) {
 								<NavLink
 									className='shopArt'
 									to='/shop/processor'
-									onClick={() => setClickeado(!clickeado)}
+									onClick={() => clickear()}
 									activeClassName='active'>
 									Processors
 								</NavLink>

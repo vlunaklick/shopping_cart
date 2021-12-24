@@ -4,18 +4,21 @@ import './nav.css'
 function Navigator(props) {
 	return (
 		<nav>
-			<Link to='/shopping_cart/' className='titNav'>
+			<Link
+				to='/shopping_cart/'
+				className='titNav'
+				onClick={() => props.cerrar()}>
 				Gaming Store
 			</Link>
 			<ul className='navAll'>
 				<li className='liName'>
-					<Link to='/shop/all' className='linkH'>
+					<Link to='/shop/all' className='linkH' onClick={() => props.cerrar()}>
 						SHOP
 					</Link>
 				</li>
 
 				<li className='liName che'>
-					<Link to='/checkout' className='linkH'>
+					<span className='linkH' onClick={() => props.carrito()}>
 						<svg
 							width='25'
 							height='25'
@@ -28,7 +31,7 @@ function Navigator(props) {
 								fill='#F0F4F8'
 							/>
 						</svg>
-					</Link>
+					</span>
 					<div className='cantidad'>{props.cant}</div>
 				</li>
 			</ul>
