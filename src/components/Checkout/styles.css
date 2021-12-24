@@ -18,10 +18,12 @@
 .titNavC{
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .mover{
-    overflow-x: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .total{
@@ -67,7 +69,6 @@
     justify-content: center;
 }
 
-
 .mainCheck{
     display: none;
     min-height: calc(100vh);
@@ -107,9 +108,10 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
-    padding: 1rem 0 0 0 ;
+    padding: 1rem 0  ;
     width: 100%;
-    max-height: calc(100vh - 168.3px);
+    max-height: calc(100vh - 200.3px);
+    margin-bottom: 0.5rem;
 }
 
 @media (max-width: 830px){
@@ -140,6 +142,7 @@
         font-size: 1rem;
     }
     .mover{
-        overflow-x: scroll;
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
 }
