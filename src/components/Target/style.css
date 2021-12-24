@@ -1,6 +1,6 @@
 :root{
-    --color-top: #b5dde0;
-    --color-bot: #2cb1bc;
+    --color-top: #CBD5E1;
+    --color-bot: #94A3B8;
     --color-btn: #E8E6E1;
     --color-btn-hover: #c5c4bd;
 }
@@ -23,6 +23,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 

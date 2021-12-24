@@ -1,16 +1,15 @@
 :root{
     --calculo: calc(100vh - 53.8px);
-    --izq-panel: #14919B;
-    --hover-pan:#128088;
-    --title:#0f6a70;
+    --top-panel: #E2E8F0;
+    --hover-panel:#d1d7df;
+    --title:#CBD5E1;
+    --color-panel: #1E293B;
 }
-
 
 .mainShop{
     min-height: var(--calculo);
     height: 100%;
 }
-
 
 .titNavIzq{
     font-size: 1.2rem;
@@ -18,14 +17,14 @@
     padding: 0.5rem 1rem;
     background-color: var(--title);
     text-align: center;
-    color: white;
+    color: var(--color-panel);
 }
 
 
 .izqPanel{
     display: flex;
     flex-direction: column;
-    background-color: var(--izq-panel);
+    background-color: var(--top-panel);
     min-width: 220px;
 }
 
@@ -61,26 +60,26 @@
 
 
 .shopArt{
-    color: white;
+    color: var(--color-panel);
     padding: 0.3rem 0.5rem;
     width: 100%;
 }
 
 .active{
-    color: white;
-    background-color: var(--hover-pan);
+    color: var(--color-panel);
+    background-color: var(--hover-panel);
     font-weight: 900;
 }
 
 .titNavIzqc{
     margin: 0;
-    color:white;
+    color: var(--color-panel);
     font-size: 1.2rem;
 }
 
 
 .shopArt:hover{
-    background-color: var(--hover-pan);
+    background-color: var(--hover-panel);
 }
 
 .products{
@@ -97,7 +96,7 @@
 
 .menuI{
     display: none;
-    fill: white;
+    fill: var(--color-panel);
 }
 .show{
     display:flex;
@@ -152,14 +151,14 @@
         font-size: 1rem;
     }
     .shopArt{
-        background-color: var(--izq-panel);
+        background-color: var(--top-panel);
         padding: 0.5rem 0.25rem;
     }
     .active{
-        background-color: var(--hover-pan);
+        background-color: var(--hover-panel);
     }
     .shopArt:hover{
-        background-color: var(--hover-pan);
+        background-color: var(--hover-panel);
     }
     .titNavIzqc{
         font-size: 1rem;

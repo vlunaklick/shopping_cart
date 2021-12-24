@@ -1,9 +1,9 @@
 :root{
     --check-btn: #d2ddf7;
-    --check-font: #000000;
+    --check-font: #1E293B;
     --check-hov: #b9c0d3;
     --check-sha: #00000069;
-    --Check-f: #deebe5;
+    --Check-f: #F1F5F9;
 }
 
 .totS{
@@ -60,7 +60,7 @@
     position: absolute;
     right: 1rem;
     cursor: pointer;
-    fill: #fff;
+    fill: var(--check-font);
 }
 
 .totalD{

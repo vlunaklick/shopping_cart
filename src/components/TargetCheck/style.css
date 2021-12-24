@@ -1,8 +1,13 @@
+:root{
+    --color-num-but: #F8FAFC;
+    --palabras-but: #1E293B;
+}
+
 .cantMid{
     width: 46px;
     height: 29px;
     background-color: black;
-    color: var(--nav-col);
+    color: var(--color-num-but);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,13 +21,15 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .priceTit{
     margin: 0;
     font-size: 1rem;
     font-weight: 600;
-    color: var(--nav-col);
+    color: var(--palabras-but);
 }
 
 .priceP{
@@ -35,5 +42,5 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: var(--nav-col)
+    color: var(--palabras-but)
 }

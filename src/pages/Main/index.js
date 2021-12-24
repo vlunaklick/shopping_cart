@@ -1,7 +1,7 @@
 import './HomeShow.css'
 import { Link } from 'react-router-dom'
 
-export default function HomeShow() {
+export default function HomeShow(props) {
 	return (
 		<>
 			<main className='mainHo'>
@@ -12,7 +12,12 @@ export default function HomeShow() {
 								<h3 className='h3H'>Make your dream computer come true.</h3>
 								<h3 className='h3H'>Be a real gamer.</h3>
 							</div>
-							<Link to='/shop/all' className='bShop'>
+							<Link
+								to='/shop/all'
+								className='bShop'
+								onClick={() => {
+									props.cerrar()
+								}}>
 								SHOP NOW
 							</Link>
 						</div>

@@ -1,8 +1,9 @@
 :root{
-    --nav-col: #F0F4F8;
-    --nav-bg: #043d42;
+    --nav-col: #1E293B;
+    --nav-bg: #94A3B8;
     --nav-hov: #0000003d;
-    --color-check: #03292c;
+    --color-checkout: #64748B;
+    --color-nav: #fff;
 }
 
 nav{
@@ -38,9 +39,9 @@ a{
 }
 
 .cantidad{
-    background-color: var(--color-check);
+    background-color: var(--color-checkout);
     border-radius: 30px;
-    color: var(--nav-col);
+    color: var(--color-nav);
     font-size: 0.7rem;
     padding: 0.2rem 0.4rem;
 }
@@ -91,8 +92,6 @@ a{
     }
 }
 
-
-
 .linkH{
     display: flex;
     justify-content: center;
@@ -102,6 +101,7 @@ a{
     transition: 0.2s;
     font-size: 0.75rem;
     cursor: pointer;
+    color: var(--color-nav)
 }
 .linkH:hover{
     background-color: var(--nav-hov);

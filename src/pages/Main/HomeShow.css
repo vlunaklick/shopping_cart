@@ -1,9 +1,10 @@
 :root{
-    --back-fondo: #EFFCF6;
-    --btn-color: #14919B;
-    --btn-color-hov: #0e767e;
-    --btn-color-sha: #09484d;
+    --back-fondo: #F1F5F9;
+    --btn-color: #E2E8F0;
+    --btn-color-hov: #CBD5E1;
+    --btn-color-sha: #a6b0bd;;
     --target-btn: #c4c4c486;
+    --color-shop: #0F172A;
 }
 
 .mainHo{
@@ -31,7 +32,7 @@
     font-size: 0.938rem;
     font-weight: 800;
     background-color: var(--btn-color);
-    color: var(--back-fondo);
+    color: var(--color-shop);
     transition: 0.25s;
     cursor: pointer;
     display: flex;
