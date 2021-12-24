@@ -59,145 +59,78 @@ export default function RouterPages() {
 	}, [compP])
 
 	return (
-		<Router>
-			<Navigator cant={cantP} carrito={cambiarCarro} cerrar={cerraCarro} />
+		<>
+			<Router>
+				<Navigator cant={cantP} carrito={cambiarCarro} cerrar={cerraCarro} />
 
-			<Switch>
-				<Route exact path='/shopping_cart/'>
-					<HomeShow />
-				</Route>
+				<Switch>
+					<Route exact path='/shopping_cart/'>
+						<HomeShow />
+					</Route>
 
-				<Route path='/shop'>
-					<Switch>
-						<Route exact path='/shop/all'>
-							<ShopMain
-								muestra='all'
-								sumar={addOneP}
-								restar={resOneP}
-								cerrar={cerraCarro}
-							/>
-							{carro ? (
-								<Checkout
-									productos={compP}
-									totalP={totalP}
+					<Route path='/shop'>
+						<Switch>
+							<Route exact path='/shop/all'>
+								<ShopMain
+									muestra='all'
 									sumar={addOneP}
 									restar={resOneP}
-									resetear={resetAll}
-									valor={carro}
-									cambiar={cambiarCarro}
+									cerrar={cerraCarro}
 								/>
-							) : (
-								''
-							)}
-						</Route>
-						<Route exact path='/shop/motherboards'>
-							<ShopMain
-								muestra='motherboards'
-								sumar={addOneP}
-								restar={resOneP}
-								cerrar={cerraCarro}
-							/>
-							{carro ? (
-								<Checkout
-									productos={compP}
-									totalP={totalP}
+							</Route>
+							<Route exact path='/shop/motherboards'>
+								<ShopMain
+									muestra='motherboards'
 									sumar={addOneP}
 									restar={resOneP}
-									resetear={resetAll}
-									valor={carro}
-									cambiar={cambiarCarro}
+									cerrar={cerraCarro}
 								/>
-							) : (
-								''
-							)}
-						</Route>
-						<Route exact path='/shop/video_card'>
-							<ShopMain
-								muestra='video_card'
-								sumar={addOneP}
-								restar={resOneP}
-								cerrar={cerraCarro}
-							/>
-							{carro ? (
-								<Checkout
-									productos={compP}
-									totalP={totalP}
+							</Route>
+							<Route exact path='/shop/video_card'>
+								<ShopMain
+									muestra='video_card'
 									sumar={addOneP}
 									restar={resOneP}
-									resetear={resetAll}
-									valor={carro}
-									cambiar={cambiarCarro}
+									cerrar={cerraCarro}
 								/>
-							) : (
-								''
-							)}
-						</Route>
-						<Route exact path='/shop/processor'>
-							<ShopMain
-								muestra='processor'
-								sumar={addOneP}
-								restar={resOneP}
-								cerrar={cerraCarro}
-							/>
-							{carro ? (
-								<Checkout
-									productos={compP}
-									totalP={totalP}
+							</Route>
+							<Route exact path='/shop/processor'>
+								<ShopMain
+									muestra='processor'
 									sumar={addOneP}
 									restar={resOneP}
-									resetear={resetAll}
-									valor={carro}
-									cambiar={cambiarCarro}
+									cerrar={cerraCarro}
 								/>
-							) : (
-								''
-							)}
-						</Route>
-						<Route exact path='/shop/memory'>
-							<ShopMain
-								muestra='memory'
-								sumar={addOneP}
-								restar={resOneP}
-								cerrar={cerraCarro}
-							/>
-							{carro ? (
-								<Checkout
-									productos={compP}
-									totalP={totalP}
+							</Route>
+							<Route exact path='/shop/memory'>
+								<ShopMain
+									muestra='memory'
 									sumar={addOneP}
 									restar={resOneP}
-									resetear={resetAll}
-									valor={carro}
-									cambiar={cambiarCarro}
+									cerrar={cerraCarro}
 								/>
-							) : (
-								''
-							)}
-						</Route>
-						<Route path='*'>
-							<Error404 cerrar={cerraCarro} />
-							{carro ? (
-								<Checkout
-									productos={compP}
-									totalP={totalP}
-									sumar={addOneP}
-									restar={resOneP}
-									resetear={resetAll}
-									valor={carro}
-									cambiar={cambiarCarro}
-								/>
-							) : (
-								''
-							)}
-						</Route>
-					</Switch>
-				</Route>
+							</Route>
+							<Route path='*'>
+								<Error404 cerrar={cerraCarro} />
+							</Route>
+						</Switch>
+					</Route>
 
-				<Route path='*'>
-					<Error404 cerrar={cerraCarro} />
-				</Route>
-			</Switch>
-		</Router>
+					<Route path='*'>
+						<Error404 cerrar={cerraCarro} />
+					</Route>
+				</Switch>
+				<Checkout
+					productos={compP}
+					totalP={totalP}
+					sumar={addOneP}
+					restar={resOneP}
+					resetear={resetAll}
+					valor={carro}
+					cambiar={cambiarCarro}
+				/>
+			</Router>
+		</>
 	)
 }
 
