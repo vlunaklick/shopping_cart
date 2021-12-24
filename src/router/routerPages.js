@@ -59,7 +59,7 @@ export default function RouterPages() {
 	}, [compP])
 
 	return (
-		<>
+		<main style={carro ? { overflowY: 'hidden' } : { overflowY: 'auto' }}>
 			<Router>
 				<Navigator cant={cantP} carrito={cambiarCarro} cerrar={cerraCarro} />
 
@@ -130,7 +130,7 @@ export default function RouterPages() {
 					cambiar={cambiarCarro}
 				/>
 			</Router>
-		</>
+		</main>
 	)
 }
 
