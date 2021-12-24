@@ -4,7 +4,7 @@
 }
 
 .error404{
-    background-color: var(--error);
+    background-color: var(--back-fondo);
     min-height: calc(100vh - 93px);
     display: flex;
     justify-content: center;
