@@ -23,7 +23,7 @@ export default function Checkout(props) {
 
 	return (
 		<>
-			<main className={props.valor ? 'mainCheck caTivo' : 'mainCheck'}>
+			<section className={props.valor ? 'mainCheck caTivo' : 'mainCheck'}>
 				<div className='total'>
 					<div className='izqPanel'>
 						<div className='titNavIzq titNavC'>
@@ -65,7 +65,7 @@ export default function Checkout(props) {
 						''
 					)}
 				</div>
-			</main>
+			</section>
 		</>
 	)
 }

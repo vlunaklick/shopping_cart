@@ -46,7 +46,7 @@ export default function ShopMain(props) {
 
 	return (
 		<>
-			<main className='mainShop'>
+			<section className='mainShop'>
 				<div className='total'>
 					<div className='izqPanel'>
 						<div className='products'>
@@ -111,7 +111,7 @@ export default function ShopMain(props) {
 					<div className='derPanel'>{tarjetas}</div>
 					{tarjetas.length > 1 ? <GoUp /> : ''}
 				</div>
-			</main>
+			</section>
 		</>
 	)
 }
