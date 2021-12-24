@@ -55,7 +55,7 @@
 
 .crossC{
     position: absolute;
-    transform: translate(900%);
+    right: 1rem;
     cursor: pointer;
     fill: #fff;
 }
@@ -125,7 +125,7 @@
         width: 320px;
     }
     .crossC{
-        transform: translate(500%);
+        right: 1rem;
     }
     .bCheck{
         width: 100px;
