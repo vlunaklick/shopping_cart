@@ -44,16 +44,17 @@ export default function Checkout(props) {
 						</h2>
 					</div>
 
-					<div className='derPanell mover'>
-						{tarjetasCheck.length === 0 ? (
+					{tarjetasCheck.length === 0 ? (
+						<div className='derPanell'>
 							<div className='messageNo'>
 								<h1 className='noItem'>Sorry!</h1>
 								<h1 className='noItemM'>There is no item in the cart. </h1>
 							</div>
-						) : (
-							tarjetasCheck
-						)}
-					</div>
+						</div>
+					) : (
+						<div className='derPanell mover'>{tarjetasCheck}</div>
+					)}
+
 					{tarjetasCheck.length > 0 ? (
 						<div className='centrarChecker'>
 							<Link to='/' className='bCheck' onClick={() => props.resetear()}>
