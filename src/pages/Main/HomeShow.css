@@ -59,7 +59,6 @@
     width: 100%;
     display: flex;
     align-items: center;
-    min-height: calc(100vh - 92px);
     justify-content: center;
     align-items: center;
 }
@@ -120,7 +119,7 @@
     .imgHome,
     .containerHome,
     main{
-        min-height: calc(100vh - 135px);
+        min-height: calc(100vh - 49px);
     }
     .h3H{
         font-size: 1.25rem;
