@@ -11,7 +11,8 @@ nav{
     padding: 0.4rem 0.72657rem;
     background-color: var(--nav-bg);
     z-index: 3;
-    position: relative;
+    position: sticky;
+    top: 0;
 }
 
 .navAll{
