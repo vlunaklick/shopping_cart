@@ -3,13 +3,13 @@
     --check-font: #1E293B;
     --check-hov: #b9c0d3;
     --check-sha: #00000069;
-    --Check-f: #F1F5F9;
+    --Check-f: #F8FAFC;
 }
 
 .totS{
     margin: 0;
     text-align: right;
-    padding: 0.635rem;
+    padding: 0.72rem 0;
     color: var(--nav-col);
     text-align: center;
     font-size: 1rem;
@@ -143,6 +143,7 @@
     }
     .totS{
         font-size: 1rem;
+        padding: 0.62rem;
     }
     .mover{
         overflow-y: scroll;

@@ -4,8 +4,8 @@
 }
 
 .cantMid{
-    width: 46px;
-    height: 29px;
+    width: 2.875rem;
+    height: 1.8125rem;
     background-color: black;
     color: var(--color-num-but);
     display: flex;
@@ -14,15 +14,15 @@
 }
 
 .picBotPrice{
-    width: 270px;
-    height: 62px;
+    width: 18.125rem;
+    height: 4.25rem;
     background-color: var(--color-bot);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 0.3125rem;
+    border-bottom-right-radius: 0.3125rem;
 }
 
 .priceTit{
