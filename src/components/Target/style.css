@@ -7,25 +7,25 @@
 }
 
 .picTop{
-    width: 18.125rem;
-    height: 18.125rem;
+    width: 17.5rem;
+    height: 17.5rem;
     background-color: var(--color-top);
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-top-left-radius: 0.313rem;
+    border-top-right-radius: 0.313rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .picBot{
-    width: 18.125rem;
+    width: 17.5rem;
     height: 4.25rem;
     background-color: var(--color-bot);
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 0.313rem;
+    border-bottom-right-radius: 0.313rem;
 }
 
 
@@ -61,19 +61,19 @@
 }
 
 .btnPreIzq{
-    width: 46px;
-    height: 29px;
-    border-bottom-left-radius: 5px;
-    border-top-left-radius: 5px;
+    width: 2.875rem;
+    height: 1.813rem;
+    border-bottom-left-radius: 0.313rem;
+    border-top-left-radius: 0.313rem;
     background-color: var(--back-fondo);
     cursor: pointer;
 }
 
 .btnPreDer{
-    width: 46px;
-    height: 29px;
-    border-bottom-right-radius: 5px;
-    border-top-right-radius: 5px;
+    width: 2.875rem;
+    height: 1.813rem;
+    border-bottom-right-radius: 0.313rem;
+    border-top-right-radius: 0.313rem;
     background-color: var(--back-fondo);
     cursor: pointer;
 }
@@ -98,7 +98,7 @@
 }
 
 .svgBtn{
-    width: 14px;
+    width: 0.875rem;
 }
 
 .target{

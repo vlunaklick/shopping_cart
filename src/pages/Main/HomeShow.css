@@ -8,7 +8,7 @@
 }
 
 .mainHo{
-    min-height: calc(100vh - 53.8px);
+    min-height: calc(100vh - 3.363rem);
     background-image: url('../../images/Vector.svg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -24,10 +24,10 @@
 }
 
 .bShop{
-    border-radius: 30px;
+    border-radius: 1.875rem;
     border: none;
-    width: 144px;
-    height: 48px;
+    width: 9rem;
+    height: 3rem;
     margin-top: 1rem;
     font-size: 0.938rem;
     font-weight: 800;
@@ -47,12 +47,12 @@
 
 
 .imgHome{
-    min-height: calc(100vh - 92px);
+    min-height: calc(100vh - 5.75rem);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 594.75px;
+    width: 37.172rem;
 }
 
 
@@ -65,13 +65,13 @@
 }
 
 .imgSrc{
-    width: 550px;
+    width: 34.375rem;
     transition: 1s;
     position:fixed;
 }
 
 .imgSrc:hover{
-    width: 575px;
+    width: 35.938rem;
 }
 
 @media (max-width: 1025px) {
@@ -115,12 +115,12 @@
         position: absolute;
     }
     .imgSrc{
-        width: 300px;
+        width: 18.75rem;
     }
     .imgHome,
     .containerHome,
     main{
-        min-height: calc(100vh - 49px);
+        min-height: calc(100vh - 3.063rem);
     }
     .h3H{
         font-size: 1.25rem;

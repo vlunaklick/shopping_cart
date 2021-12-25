@@ -34,7 +34,7 @@
 }
 
 .bCheck{
-    border-radius: 30px;
+    border-radius: 1.875rem;
     border: none;
     width: 9rem;
     height: 3rem;
@@ -113,13 +113,13 @@
     gap: 2rem;
     padding: 1rem 0  ;
     width: 100%;
-    max-height: calc(100vh - 200.3px);
+    max-height: calc(100vh - 12.519rem);
     margin-bottom: 0.5rem;
 }
 
 @media (max-width: 830px){
     .derPanell{
-        max-height: calc(100vh - 200.3px);
+        max-height: calc(100vh - 12.519rem);
         margin-bottom: 0.25rem;
     }
     .mainCheck{

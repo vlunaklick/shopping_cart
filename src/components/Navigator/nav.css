@@ -40,7 +40,7 @@ a{
 
 .cantidad{
     background-color: var(--color-checkout);
-    border-radius: 30px;
+    border-radius: 1.875rem;
     color: var(--color-nav);
     font-size: 0.7rem;
     padding: 0.2rem 0.4rem;

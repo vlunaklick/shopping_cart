@@ -5,7 +5,7 @@
 
 .error404{
     background-color: var(--back-fondo);
-    min-height: calc(100vh - 93px);
+    min-height: calc(100vh - 5.813rem);
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,5 +1,5 @@
 :root{
-    --calculo: calc(100vh - 53.8px);
+    --calculo: calc(100vh - 3.363rem);
     --top-panel: #E2E8F0;
     --hover-panel:#d1d7df;
     --title:#CBD5E1;
@@ -25,7 +25,7 @@
     display: flex;
     flex-direction: column;
     background-color: var(--top-panel);
-    min-width: 220px;
+    min-width: 13.75rem;
 }
 
 .derPanel{
@@ -140,7 +140,7 @@
     }
     .mainShop{
         display: block;
-        min-height: calc(100vh - 145.267px);
+        min-height: calc(100vh - 9.079rem);
     }
     .titNavIzq{
         width: 100%;
