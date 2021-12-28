@@ -6,34 +6,19 @@
     --Check-f: #F8FAFC;
 }
 
-.totS{
-    margin: 0;
-    text-align: right;
-    padding: 0.72rem 0;
+.check-subtotal{
+    padding: 0.68rem 0;
     color: var(--nav-col);
     text-align: center;
     font-size: 1rem;
 }
 
-.titNavC{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.mover{
+.check-overflowy{
     overflow-y: visible;
     overflow-x: hidden;
 }
 
-.total{
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    height: 100%;
-}
-
-.bCheck{
+.check-btn{
     border-radius: 1.875rem;
     border: none;
     width: 9rem;
@@ -51,28 +36,24 @@
     bottom: 1.3rem;
 }
 
-.bCheck:hover{
+.check-btn:hover{
     background-color: var(--check-hov);
     box-shadow: 0 0 2px var(--check-sha);
 }
 
-.crossC{
+.check-cross-btn{
     position: absolute;
     right: 1rem;
     cursor: pointer;
     fill: var(--check-font);
 }
 
-.totalD{
-    margin: 0;
-}
-
-.centrarChecker{
+.check-btn-center{
     display: flex;
     justify-content: center;
 }
 
-.mainCheck{
+.check-main{
     display: flex;
     min-height: calc(100vh);
     height: 100%;
@@ -85,28 +66,25 @@
     box-shadow: -4px 0px 5px -5px rgba(0,0,0,1);
     transition: all 0.75s ease;
     opacity: 1;
+    flex-direction: column;
 }
-.noItem{
-    margin: 0;
+.check-message-top-part{ 
     font-size: 7rem;
     text-align: center;
 }
-.noItemM{
-    margin: 0;
-    text-align: center;
-}
-.messageNo{
+
+.check-message-empty{
     display: flex;
     flex-direction: column;
 }
 
-.caTivo{
+.check-main-movement{
     right: 0%;
     opacity: 1;
     transition: all 0.75s ease;
 }
 
-.derPanell{
+.check-section-items{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -117,41 +95,66 @@
     margin-bottom: 0.5rem;
 }
 
+.check-header-container{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--top-panel);
+    min-width: 13.75rem;
+}
+
+.check-header{
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0.62rem 1rem;
+    background-color: var(--title);
+    text-align: center;
+    color: var(--color-panel);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media (max-width: 830px){
-    .derPanell{
+    .check-header{
+        width: 100%;
+        text-align: center;
+        padding: 0.64rem 0;
+        font-size: 1rem;
+    }
+    .check-header-container{
+        
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
+    }
+    .check-section-items{
         max-height: calc(100vh - 12.519rem);
         margin-bottom: 0.25rem;
     }
-    .mainCheck{
+    .check-main{
         display: block;
         min-height: 0;
         width: 20rem;
     }
-    .crossC{
+    .check-cross-btn{
         right: 1rem;
     }
-    .bCheck{
+    .check-btn{
         width: 6.25rem;
         height: 2.1875rem;
         font-size: 0.75rem;
-    }
-    .noItem{
-        font-size: 4rem;
-    }
-    .noItemM{
-        font-size: 1rem;
-    }
-    .totS{
-        font-size: 1rem;
-        padding: 0.62rem;
-    }
-    .mover{
-        overflow-y: scroll;
-        overflow-x: hidden;
-    }
-    .bCheck{
         display: flex;
         position: absolute;
         bottom: 0.8rem;
+    }
+    .check-message-top-part{
+        font-size: 4rem;
+    }
+    .check-message-bottom-part{
+        font-size: 1rem;
+    }
+    .check-subtotal{
+        font-size: 1rem;
+        padding: 0.62rem;
     }
 }

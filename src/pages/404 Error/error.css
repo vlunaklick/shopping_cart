@@ -14,7 +14,7 @@
 
 .titError,
 .pError{
-    margin: 0;
+    
     color: var(--font-error);
 }
 

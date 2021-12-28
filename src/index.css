@@ -15,9 +15,10 @@ body {
   scroll-behavior: smooth;
   overflow-y: auto;
   overflow-x: hidden;
+  line-height: 1.5;
 }
 
-.notOver{
+.overflowY-desactivate{
   overflow-y: hidden;
 }
 
@@ -32,12 +33,6 @@ body {
 html, body {
   height: 100%;
 }
-
-body {
-  line-height: 1.5;
-  -webkit-font-smoothing: antialiased;
-}
-
 img, picture, video, canvas, svg {
   display: block;
   max-width: 100%;

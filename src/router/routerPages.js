@@ -41,11 +41,11 @@ export default function RouterPages() {
 
 	const cambiarCarro = () => {
 		changeCarro(!carro)
-		document.body.classList.add('notOver')
+		document.body.classList.add('overflowY-desactivate')
 	}
 
 	const cerraCarro = () => {
-		document.body.classList.remove('notOver')
+		document.body.classList.remove('overflowY-desactivate')
 		changeCarro(false)
 	}
 
@@ -61,7 +61,6 @@ export default function RouterPages() {
 	}, [compP])
 
 	return (
-		<main style={carro ? { overflowY: 'hidden' } : { overflowY: '' }}>
 			<Router>
 				<Navigator cant={cantP} carrito={cambiarCarro} cerrar={cerraCarro} />
 
@@ -132,7 +131,6 @@ export default function RouterPages() {
 					cambiar={cerraCarro}
 				/>
 			</Router>
-		</main>
 	)
 }
 

@@ -23,49 +23,47 @@ export default function Checkout(props) {
 
 	return (
 		<>
-			<section className={props.valor ? 'mainCheck caTivo' : 'mainCheck'}>
-				<div className='total'>
-					<div className='izqPanel'>
-						<div className='titNavIzq titNavC'>
-							<h4 className='totalD'>CART</h4>
+			<aside className={props.valor ? 'check-main check-main-movement' : 'check-main'}>
+					<div className='check-header-container'>
+						<header className='check-header'>
+							<h3>CART</h3>
 							<svg
 								onClick={() => props.cambiar()}
-								className='crossC'
+								className='check-cross-btn'
 								xmlns='http://www.w3.org/2000/svg'
 								width='20'
 								height='20'
 								viewBox='0 0 24 24'>
 								<path d='M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z' />
 							</svg>
-						</div>
-						<h2 className='totS'>
+						</header>
+						<h4 className='check-subtotal'>
 							{' '}
 							Subtotal: ${Math.floor(props.totalP * 100) / 100}
-						</h2>
+						</h4>
 					</div>
 
 					{tarjetasCheck.length === 0 ? (
-						<div className='derPanell'>
-							<div className='messageNo'>
-								<h1 className='noItem'>Sorry!</h1>
-								<h1 className='noItemM'>There is no item in the cart. </h1>
+						<section className='check-section-items'>
+							<div className='check-message-empty'>
+								<h1 className='check-message-top-part'>Sorry!</h1>
+								<h1 className='check-message-bottom-part'>There is no item in the cart. </h1>
 							</div>
-						</div>
+						</section>
 					) : (
-						<div className='derPanell mover'>{tarjetasCheck}</div>
+						<section className='check-section-items check-overflowy'>{tarjetasCheck}</section>
 					)}
 
 					{tarjetasCheck.length > 0 ? (
-						<div className='centrarChecker'>
-							<Link to='/' className='bCheck' onClick={() => props.resetear()}>
+						<div className='check-btn-center'>
+							<Link to='/' className='check-btn' onClick={() => props.resetear()}>
 								CHECKOUT
 							</Link>
 						</div>
 					) : (
 						''
 					)}
-				</div>
-			</section>
+			</aside>
 		</>
 	)
 }
