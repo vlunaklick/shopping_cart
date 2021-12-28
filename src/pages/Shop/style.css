@@ -6,7 +6,7 @@
     --color-panel: #1E293B;
 }
 
-.mainShop{
+.main-shop{
     min-height: var(--calculo);
     height: 100%;
 }
@@ -14,14 +14,14 @@
 
 
 
-.izqPanel{
+.main-shop-navigator{
     display: flex;
     flex-direction: column;
     background-color: var(--top-panel);
     min-width: 13.75rem;
 }
 
-.derPanel{
+.main-shop-navigator-bottom{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -30,7 +30,7 @@
     width: 100%;
 }
 
-.downU{
+.main-shop-navigator-list{
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -39,7 +39,7 @@
     
 }
 
-.liU{
+.main-shop-navigator-list-option{
     text-align: center;
     display: flex;
     line-height: 2rem;
@@ -50,7 +50,7 @@
 
 
 
-.shopArt{
+.main-shop-navigator-list-option-hiperlink{
     color: var(--color-panel);
     padding: 0.4rem 0.5rem;
     width: 12ch;
@@ -62,18 +62,18 @@
     font-weight: 900;
 }
 
-.titNavIzqc{
+.main-shop-navigator-products-title{
     
     color: var(--color-panel);
     font-size: 1.2rem;
 }
 
 
-.shopArt:hover{
+.main-shop-navigator-list-option-hiperlink:hover{
     background-color: var(--hover-panel);
 }
 
-.products{
+.main-shop-navigator-products{
     display: none;
     font-size: 1.875rem;
     
@@ -85,16 +85,16 @@
     gap:2rem
 }
 
-.menuI{
+.main-shop-navigator-products-menu-btn{
     display: none;
     fill: var(--color-panel);
 }
-.show{
+.main-shop-navigator-list-show{
     display:flex;
 }
 
 @media (max-width: 949px) {
-    .downU{
+    .main-shop-navigator-list{
         position: absolute;
         top: -100%;
         transition: all 0.75s ease;
@@ -104,38 +104,38 @@
         flex-direction: column;
         gap: 0;
     }
-    .show{
+    .main-shop-navigator-list-show{
         top: 5.638rem;
         opacity: 1;
     }
-    .menuI{
+    .main-shop-navigator-products-menu-btn{
         display: flex;
         cursor: pointer;
         position: absolute;
         right: 0;
         transform: translate(-60%);
     }
-    .products{
+    .main-shop-navigator-products{
         width: 100%;
         padding: 0.6rem 0;
         z-index: 2;
         display: flex;
     }
-    .izqPanel{
+    .main-shop-navigator{
         
         justify-content: center;
         align-items: center;
         margin-bottom: 1rem;
     }
-    .liU{
+    .main-shop-navigator-list-option{
         text-align: center;
         width: 100%;
     }
-    .mainShop{
+    .main-shop{
         display: block;
         min-height: calc(100vh - 9.079rem);
     }
-    .shopArt{
+    .main-shop-navigator-list-option-hiperlink{
         background-color: var(--top-panel);
         padding: 0.5rem 0.25rem;
         width: 100%;
@@ -143,10 +143,10 @@
     .active{
         background-color: var(--hover-panel);
     }
-    .shopArt:hover{
+    .main-shop-navigator-list-option-hiperlink:hover{
         background-color: var(--hover-panel);
     }
-    .titNavIzqc{
+    .main-shop-navigator-products-title{
         font-size: 1rem;
     }
 }
