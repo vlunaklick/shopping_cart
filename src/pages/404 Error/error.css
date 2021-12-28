@@ -3,7 +3,7 @@
     --font-error: #000;
 }
 
-.error404{
+.main-error{
     background-color: var(--back-fondo);
     min-height: calc(100vh - 5.813rem);
     display: flex;
@@ -12,17 +12,17 @@
     flex-direction: column;
 }
 
-.titError,
-.pError{
+.main-error-title,
+.main-error-paragraph{
     
     color: var(--font-error);
 }
 
-.titError{
+.main-error-title{
     font-size: 4rem;
 }
 
-.pError{
+.main-error-paragraph{
     font-size: 2rem;
     text-align: center;
 }

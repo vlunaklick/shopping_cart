@@ -5,7 +5,7 @@ export default function HomeShow(props) {
 	return (
 		<>
 			<main className='main-home'>
-					<div className='main-home-panel main-home-panel-left'>
+					<section className='main-home-panel main-home-panel-left'>
 						<div>
 							<div className='main-home-panel-left-text'>
 								<h3 className='main-home-panel-left-text-msg'>Make your dream computer come true.</h3>
@@ -20,14 +20,14 @@ export default function HomeShow(props) {
 								SHOP NOW
 							</Link>
 						</div>
-					</div>
-					<div className='main-home-panel main-home-panel-rigth-img'>
+					</section>
+					<section className='main-home-panel main-home-panel-rigth-img'>
 						<img
 							className='main-home-panel-rigth-img-src'
 							src='https://i.imgur.com/msGgRDM.png'
 							alt=''
 						/>
-					</div>
+					</section>
 			</main>
 		</>
 	)
