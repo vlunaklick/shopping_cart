@@ -6,7 +6,7 @@
     --color-nav: #fff;
 }
 
-nav{
+.navigator{
     display: flex;
     padding: 0.4rem 0.72657rem;
     background-color: var(--nav-bg);
@@ -15,10 +15,9 @@ nav{
     top: 0;
 }
 
-.navAll{
+.list-links-nav{
     display: flex;
     align-items: center;
-    margin: 0;
     width: 100%;
     padding: 0;
     justify-content: right;
@@ -26,19 +25,14 @@ nav{
     transform: translate(-10%);
 }
 
-a{
-    text-decoration: none;
-    color: var(--nav-col);
-}
-
-.liName{
+.list-li-nav{
     list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.cantidad{
+.cart-amount-nav{
     background-color: var(--color-checkout);
     border-radius: 1.875rem;
     color: var(--color-nav);
@@ -46,18 +40,16 @@ a{
     padding: 0.2rem 0.4rem;
 }
 
-.titNav{
+.title-nav{
     font-size: 1.5rem;
-    margin: 0;
     width: 100%;
     color: var(--color-nav);
     font-weight: 700;
-    margin-left: 2rem;
     display: flex;
     align-items: center;
 }
 
-.che{
+.gap-cart-nav{
     display: flex;
     align-items: center;
     gap: 0.1rem;
@@ -70,29 +62,7 @@ a{
     align-items: center;
 }
 
-@media (max-width: 740px) {
-    nav{
-        position:sticky;
-        width: 100%;
-        z-index: 3;
-        padding: 0.25rem 0;
-        top: 0;
-    }
-    .titNav{
-        text-align: center;
-        margin: 0;
-        font-size: 1.2rem;
-        transform: translate(10%);
-    }
-    .liName{
-        text-align: center;
-    }
-    .linkH{
-        font-size: 0.75rem;
-    }
-}
-
-.linkH{
+.list-hiper-nav{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,6 +73,28 @@ a{
     cursor: pointer;
     color: var(--color-nav)
 }
-.linkH:hover{
+
+.list-hiper-nav:hover{
     background-color: var(--nav-hov);
+}
+
+@media (max-width: 740px) {
+    .navigator{
+        position:sticky;
+        width: 100%;
+        z-index: 3;
+        padding: 0.25rem 0;
+        top: 0;
+    }
+    .title-nav{
+        text-align: center;
+        font-size: 1.2rem;
+        transform: translate(10%);
+    }
+    .list-li-nav{
+        text-align: center;
+    }
+    .list-hiper-nav{
+        font-size: 0.75rem;
+    }
 }

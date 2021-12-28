@@ -3,26 +3,25 @@ import './nav.css'
 
 function Navigator(props) {
 	return (
-		<nav>
+		<nav className="navigator">
 			<Link
 				to='/shopping_cart/'
-				className='titNav'
+				className='title-nav'
 				onClick={() => props.cerrar()}>
 				Gaming Store
 			</Link>
-			<ul className='navAll'>
-				<li className='liName'>
-					<Link to='/shop/all' className='linkH' onClick={() => props.cerrar()}>
+			<ul className='list-links-nav'>
+				<li className='list-li-nav'>
+					<Link to='/shop/all' className='list-hiper-nav' onClick={() => props.cerrar()}>
 						SHOP
 					</Link>
 				</li>
 
-				<li className='liName che'>
-					<span className='linkH' onClick={() => props.carrito()}>
+				<li className='list-li-nav gap-cart-nav'>
+					<span className='list-hiper-nav' onClick={() => props.carrito()}>
 						<svg
 							width='25'
 							height='25'
-							className='svgL'
 							viewBox='0 0 36 36'
 							xmlns='http://www.w3.org/2000/svg'>
 							<path
@@ -31,7 +30,7 @@ function Navigator(props) {
 							/>
 						</svg>
 					</span>
-					<div className='cantidad'>{props.cant}</div>
+					<p className='cart-amount-nav'>{props.cant}</p>
 				</li>
 			</ul>
 		</nav>
