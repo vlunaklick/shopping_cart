@@ -4,17 +4,17 @@ export default function TargetCheck(props) {
 	return (
 		<>
 			<div className='target'>
-				<div className='picTop'>
-					<img className='picIMG' src={props.image} alt='' />
+				<div className='target-top-part'>
+					<img className='target-top-part-img' src={props.image} alt='' />
 				</div>
 				<div className='picBotPrice'>
 					<div className='toppingP'>
 						<h2 className='priceTit'>{props.nameU}</h2>
 						<p className='priceP'>${props.price}</p>
 					</div>
-					<div className='btnPre'>
+					<div className='target-bottom-part-btn'>
 						<div
-							className='btnPreIzq'
+							className='target-bottom-part-btn-left'
 							onClick={() => props.restar(props.nameU)}>
 							<svg
 								aria-hidden='true'
@@ -33,7 +33,7 @@ export default function TargetCheck(props) {
 
 						<div className='cantMid'>{props.cantiT}</div>
 
-						<div className='btnPreDer' onClick={() => props.sumar(props.nameU)}>
+						<div className='target-bottom-part-btn-rigth' onClick={() => props.sumar(props.nameU)}>
 							<svg
 								aria-hidden='true'
 								focusable='false'

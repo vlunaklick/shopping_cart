@@ -6,7 +6,7 @@
     --color-font-target: #F8FAFC;
 }
 
-.picTop{
+.target-top-part{
     width: 17.5rem;
     height: 17.5rem;
     background-color: var(--color-top);
@@ -17,7 +17,7 @@
     align-items: center;
 }
 
-.picBot{
+.target-bottom-part{
     width: 17.5rem;
     height: 4.25rem;
     background-color: var(--color-bot);
@@ -29,38 +29,38 @@
 }
 
 
-.picIMG{
+.target-top-part-img{
     width: 90%;
     height: 90%;
     object-fit: cover;
     transition: 0.5s;
 }
 
-.textBot{
+.target-bottom-part-text{
     display: flex;
     flex-direction: column;
     margin-left: 0.5rem;
     width: 100%;
 }
 
-.titBot,
-.priceBot{
+.target-bottom-part-text-name,
+.target-bottom-part-text-price{
     
     color: var(--color-font-target);
     font-weight: 400;
     line-height: 1rem;
 }
 
-.titBot{
+.target-bottom-part-text-name{
     font-size: 1rem;
     font-weight: 600;
 }
 
-.priceBot{
+.target-bottom-part-text-price{
     font-size: 0.625rem;
 }
 
-.btnPreIzq{
+.target-bottom-part-btn-left{
     width: 2.875rem;
     height: 1.813rem;
     border-bottom-left-radius: 0.313rem;
@@ -69,7 +69,7 @@
     cursor: pointer;
 }
 
-.btnPreDer{
+.target-bottom-part-btn-rigth{
     width: 2.875rem;
     height: 1.813rem;
     border-bottom-right-radius: 0.313rem;
@@ -78,22 +78,22 @@
     cursor: pointer;
 }
 
-.btnPreDer,
-.btnPreIzq{
+.target-bottom-part-btn-rigth,
+.target-bottom-part-btn-left{
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.2s;
 }
 
-.btnPre{
+.target-bottom-part-btn{
     display: flex;
     justify-content: center;
     width: 80%;
 }
 
-.btnPreDer:hover,
-.btnPreIzq:hover{
+.target-bottom-part-btn-rigth:hover,
+.target-bottom-part-btn-left:hover{
     background-color: var(--color-btn-hover);
 }
 

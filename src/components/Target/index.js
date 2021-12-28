@@ -3,18 +3,18 @@ import './style.css'
 export default function Target(props) {
     return (
         <>
-            <div className="target">
-                <div className="picTop">
-                    <img className="picIMG" src={props.image} alt="" />
+            <section className="target">
+                <div className="target-top-part">
+                    <img className="target-top-part-img" src={props.image} alt="" />
                 </div>
-                <div className="picBot">
-                    <div className="textBot">
-                        <h2 className="titBot">{props.nameU}</h2>
-                        <p className="priceBot">${props.price}</p>
+                <div className="target-bottom-part">
+                    <div className="target-bottom-part-text">
+                        <h5 className="target-bottom-part-text-name">{props.nameU}</h5>
+                        <p className="target-bottom-part-text-price">${props.price}</p>
                     </div>
-                    <div className="btnPre">
+                    <div className="target-bottom-part-btn">
                         <div
-                            className="btnPreIzq"
+                            className="target-bottom-part-btn-left"
                             onClick={() => props.restar(props.nameU)}
                         >
                             <svg
@@ -34,7 +34,7 @@ export default function Target(props) {
                             </svg>
                         </div>
                         <div
-                            className="btnPreDer"
+                            className="target-bottom-part-btn-rigth"
                             onClick={() => props.sumar(props.nameU)}
                         >
                             <svg
@@ -55,7 +55,7 @@ export default function Target(props) {
                         </div>
                     </div>
                 </div>
-            </div>
+            </section>
         </>
     )
 }
