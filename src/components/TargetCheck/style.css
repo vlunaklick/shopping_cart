@@ -3,7 +3,7 @@
     --palabras-but: #1E293B;
 }
 
-.cantMid{
+.target-bottom-check-part-quantity{
     width: 2.875rem;
     height: 1.8125rem;
     background-color: black;
@@ -13,7 +13,7 @@
     align-items: center;
 }
 
-.picBotPrice{
+.target-bottom-check-part{
     width: 17.5rem;
     height: 4.25rem;
     background-color: var(--color-bot);
@@ -25,20 +25,20 @@
     border-bottom-right-radius: 0.3125rem;
 }
 
-.priceTit{
+.target-bottom-check-part-price-title{
     
     font-size: 1rem;
     font-weight: 600;
     color: var(--palabras-but);
 }
 
-.priceP{
+.target-bottom-check-part-price-price{
     
     margin-left: 0.5rem;
     font-size: 0.6rem;
 }
 
-.toppingP{
+.target-bottom-check-part-price{
     display: flex;
     justify-content: center;
     align-items: center;

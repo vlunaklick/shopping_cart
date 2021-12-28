@@ -7,10 +7,10 @@ export default function TargetCheck(props) {
 				<div className='target-top-part'>
 					<img className='target-top-part-img' src={props.image} alt='' />
 				</div>
-				<div className='picBotPrice'>
-					<div className='toppingP'>
-						<h2 className='priceTit'>{props.nameU}</h2>
-						<p className='priceP'>${props.price}</p>
+				<div className='target-bottom-check-part'>
+					<div className='target-bottom-check-part-price'>
+						<h2 className='target-bottom-check-part-price-title'>{props.nameU}</h2>
+						<p className='target-bottom-check-part-price-price'>${props.price}</p>
 					</div>
 					<div className='target-bottom-part-btn'>
 						<div
@@ -31,7 +31,7 @@ export default function TargetCheck(props) {
 							</svg>
 						</div>
 
-						<div className='cantMid'>{props.cantiT}</div>
+						<div className='target-bottom-check-part-quantity'>{props.cantiT}</div>
 
 						<div className='target-bottom-part-btn-rigth' onClick={() => props.sumar(props.nameU)}>
 							<svg
