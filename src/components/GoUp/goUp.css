@@ -3,7 +3,7 @@
     --botton-hover: #334155;
 }
 
-.goUpB{
+.goup-btn{
     background-color: var(--botton);
     display: flex;
     align-items: center;
@@ -20,15 +20,15 @@
     box-shadow: rgba(0,0,0,0.8) 0 0 2px;
 }
 
-.flechaL{
+.goup-arrow{
     transform: rotate(-90deg);
     fill: white;
 }
 
-.goUpB:hover{
+.goup-btn:hover{
     background-color: var(--botton-hover);
 }
 
-.goUpB:active{
+.goup-btn:active{
     transform: scale(1rem , 1rem);
 }
