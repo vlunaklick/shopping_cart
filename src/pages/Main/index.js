@@ -4,17 +4,16 @@ import { Link } from 'react-router-dom'
 export default function HomeShow(props) {
 	return (
 		<>
-			<main className='mainHo'>
-				<div className='containerHome'>
-					<div className='imgHome teH'>
+			<main className='main-home'>
+					<div className='main-home-panel main-home-panel-left'>
 						<div>
-							<div className='textHome'>
-								<h3 className='h3H'>Make your dream computer come true.</h3>
-								<h3 className='h3H'>Be a real gamer.</h3>
+							<div className='main-home-panel-left-text'>
+								<h3 className='main-home-panel-left-text-msg'>Make your dream computer come true.</h3>
+								<h3 className='main-home-panel-left-text-msg'>Be a real gamer.</h3>
 							</div>
 							<Link
 								to='/shop/all'
-								className='bShop'
+								className='main-home-panel-left-btn'
 								onClick={() => {
 									props.cerrar()
 								}}>
@@ -22,14 +21,13 @@ export default function HomeShow(props) {
 							</Link>
 						</div>
 					</div>
-					<div className='imgHome imgP'>
+					<div className='main-home-panel main-home-panel-rigth-img'>
 						<img
-							className='imgSrc'
+							className='main-home-panel-rigth-img-src'
 							src='https://i.imgur.com/msGgRDM.png'
 							alt=''
 						/>
 					</div>
-				</div>
 			</main>
 		</>
 	)

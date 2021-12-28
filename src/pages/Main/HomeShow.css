@@ -7,23 +7,26 @@
     --color-shop: #0F172A;
 }
 
-.mainHo{
+.main-home{
     min-height: calc(100vh - 3.363rem);
     background-image: url('../../images/Vector.svg');
     background-repeat: no-repeat;
     background-size: cover;
-    display: block;
     background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
 }
 
-.h3H{
+.main-home-panel-left-text-msg{
     
     font-weight: 100;
     color: var(--color-nav);
     font-size: 2.2rem;
 }
 
-.bShop{
+.main-home-panel-left-btn{
     border-radius: 1.875rem;
     border: none;
     width: 9rem;
@@ -40,13 +43,13 @@
     align-items: center;
 }
 
-.bShop:hover{
+.main-home-panel-left-btn:hover{
     background-color: var(--btn-color-hov);
     box-shadow: 0 0 5px var(--btn-color-sha);
 }
 
 
-.imgHome{
+.main-home-panel{
     min-height: calc(100vh - 5.75rem);
     display: flex;
     flex-direction: column;
@@ -55,74 +58,65 @@
     width: 37.172rem;
 }
 
-
-.containerHome{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    align-items: center;
-}
-
-.imgSrc{
+.main-home-panel-rigth-img-src{
     width: 34.375rem;
     transition: 1s;
     position:fixed;
 }
 
-.imgSrc:hover{
+.main-home-panel-rigth-img-src:hover{
     width: 35.938rem;
 }
 
 @media (max-width: 1025px) {
-    .teH{
+    .main-home-panel-left{
         z-index: 1;
     }
-    .textHome{
+    .main-home-panel-left-text{
         background-color: var(--target-btn);
         padding: 0.5rem;
     }
-    .imgP{
+    .main-home-panel-rigth-img{
         position: absolute;
     }
-    .imgHome{
+    .main-home-panel{
         width: 100%;
     }
-    .imgSrc{
+    .main-home-panel-rigth-img-src{
         position:absolute;
     }
-    .mainHo{
+    .main-home{
         min-height: 0;
     }
 }
 
 @media (max-width: 1270px) {
-    .h3H{
+    .main-home-panel-left-text-msg{
         font-size: 1.5rem;
     }
 }
 
 
 @media (max-width: 750px) {
-    .teH{
+    .main-home-panel-left{
         z-index: 1;
     }
-    .textHome{
+    .main-home-panel-left-text{
         background-color: var(--target-btn);
         padding: 0.5rem;
     }
-    .imgP{
+    .main-home-panel-rigth-img{
         position: absolute;
     }
-    .imgSrc{
+    .main-home-panel-rigth-img-src{
         width: 18.75rem;
     }
-    .imgHome,
+    .main-home-panel,
     .containerHome,
     main{
         min-height: calc(100vh - 3.063rem);
     }
-    .h3H{
+    .main-home-panel-left-text-msg{
         font-size: 1.25rem;
     }
 }
