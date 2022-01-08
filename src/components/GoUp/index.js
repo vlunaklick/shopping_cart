@@ -1,10 +1,10 @@
 import './goUp.css'
 
-function GoUp() {
+function GoUp({ show }) {
 	return (
 		<>
 			<span
-				className='goup-btn'
+				className={show ? 'goup-btn show-btn' : 'goup-btn'}
 				onClick={() =>
 					window.scrollTo({
 						top: 0,
