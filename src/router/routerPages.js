@@ -6,47 +6,23 @@ import HomeShow from '../pages/Main'
 import Error404 from '../pages/404 Error'
 import ShopMain from '../pages/Shop'
 import Checkout from '../components/Checkout'
+import useItems from '../hooks/useItems'
+import useCarro from '../hooks/useCarro'
 
 export default function RouterPages() {
 	let [cantP, changeCant] = useState(0)
 
-	let [compP, changeComp] = useState(objCompra)
-
 	let [totalP, changeTot] = useState(0)
 
-	let [carro, changeCarro] = useState(false)
+	let [carro, cambiarCarro, cerraCarro] = useCarro()
+
+	let [compP, addOneP, resetOneP, resOneP] = useItems()
 
 	const resetAll = () => {
-		changeComp(objCompra)
+		resetOneP()
 		changeTot(0)
 		changeCant(0)
 		cambiarCarro()
-	}
-
-	const addOneP = id => {
-		changeComp(prevState => {
-			return { ...prevState, [id]: prevState[id] + 1 }
-		})
-	}
-
-	const resOneP = id => {
-		changeComp(prevState => {
-			if (prevState[id] === 0) {
-				return { ...prevState }
-			} else {
-				return { ...prevState, [id]: prevState[id] - 1 }
-			}
-		})
-	}
-
-	const cambiarCarro = () => {
-		changeCarro(!carro)
-		document.body.classList.add('overflowY-desactivate')
-	}
-
-	const cerraCarro = () => {
-		document.body.classList.remove('overflowY-desactivate')
-		changeCarro(false)
 	}
 
 	useEffect(() => {
@@ -61,93 +37,77 @@ export default function RouterPages() {
 	}, [compP])
 
 	return (
-			<Router>
-				<Navigator cant={cantP} carrito={cambiarCarro} cerrar={cerraCarro} />
+		<Router>
+			<Navigator cant={cantP} carrito={cambiarCarro} cerrar={cerraCarro} />
 
-				<Switch>
-					<Route exact path='/shopping_cart/'>
-						<HomeShow cerrar={cerraCarro} />
-					</Route>
+			<Switch>
+				<Route exact path='/shopping_cart/'>
+					<HomeShow cerrar={cerraCarro} />
+				</Route>
 
-					<Route path='/shop'>
-						<Switch>
-							<Route exact path='/shop/all'>
-								<ShopMain
-									muestra='all'
-									sumar={addOneP}
-									restar={resOneP}
-									cerrar={cerraCarro}
-								/>
-							</Route>
-							<Route exact path='/shop/motherboards'>
-								<ShopMain
-									muestra='motherboards'
-									sumar={addOneP}
-									restar={resOneP}
-									cerrar={cerraCarro}
-								/>
-							</Route>
-							<Route exact path='/shop/video_card'>
-								<ShopMain
-									muestra='video_card'
-									sumar={addOneP}
-									restar={resOneP}
-									cerrar={cerraCarro}
-								/>
-							</Route>
-							<Route exact path='/shop/processor'>
-								<ShopMain
-									muestra='processor'
-									sumar={addOneP}
-									restar={resOneP}
-									cerrar={cerraCarro}
-								/>
-							</Route>
-							<Route exact path='/shop/memory'>
-								<ShopMain
-									muestra='memory'
-									sumar={addOneP}
-									restar={resOneP}
-									cerrar={cerraCarro}
-								/>
-							</Route>
-							<Route path='*'>
-								<Error404 cerrar={cerraCarro} />
-							</Route>
-						</Switch>
-					</Route>
+				<Route path='/shop'>
+					<Switch>
+						<Route exact path='/shop/all'>
+							<ShopMain
+								muestra='all'
+								sumar={addOneP}
+								restar={resOneP}
+								cerrar={cerraCarro}
+							/>
+						</Route>
+						<Route exact path='/shop/motherboards'>
+							<ShopMain
+								muestra='motherboards'
+								sumar={addOneP}
+								restar={resOneP}
+								cerrar={cerraCarro}
+							/>
+						</Route>
+						<Route exact path='/shop/video_card'>
+							<ShopMain
+								muestra='video_card'
+								sumar={addOneP}
+								restar={resOneP}
+								cerrar={cerraCarro}
+							/>
+						</Route>
+						<Route exact path='/shop/processor'>
+							<ShopMain
+								muestra='processor'
+								sumar={addOneP}
+								restar={resOneP}
+								cerrar={cerraCarro}
+							/>
+						</Route>
+						<Route exact path='/shop/memory'>
+							<ShopMain
+								muestra='memory'
+								sumar={addOneP}
+								restar={resOneP}
+								cerrar={cerraCarro}
+							/>
+						</Route>
+						<Route path='*'>
+							<Error404 cerrar={cerraCarro} />
+						</Route>
+					</Switch>
+				</Route>
 
-					<Route path='*'>
-						<Error404 cerrar={cerraCarro} />
-					</Route>
-				</Switch>
-				<Checkout
-					productos={compP}
-					totalP={totalP}
-					sumar={addOneP}
-					restar={resOneP}
-					resetear={resetAll}
-					valor={carro}
-					cambiar={cerraCarro}
-				/>
-			</Router>
+				<Route path='*'>
+					<Error404 cerrar={cerraCarro} />
+				</Route>
+			</Switch>
+			<Checkout
+				productos={compP}
+				totalP={totalP}
+				sumar={addOneP}
+				restar={resOneP}
+				resetear={resetAll}
+				valor={carro}
+				cambiar={cerraCarro}
+			/>
+		</Router>
 	)
-}
-
-let objCompra = {
-	'AMD Ryzen 3 1200': 0,
-	'GTX 1070': 0,
-	'GIGABYTE Z77X': 0,
-	'ROG STRIX Z490': 0,
-	'Crucial memo 8GB': 0,
-	'ASUS DUAL RX580': 0,
-	'Intel I5 8260U': 0,
-	'GTX 1060': 0,
-	'GeForce GTX 1650': 0,
-	'MSI Fake City': 0,
-	'Intel I5 10400F': 0,
-	'GIGABYTE RX 570': 0,
-	'AMD Ryzen 5 3600': 0,
 }
 
 let objCompraPrecios = {

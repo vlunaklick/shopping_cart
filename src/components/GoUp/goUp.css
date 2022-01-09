@@ -12,12 +12,13 @@
     position: fixed;
     padding: 0.5rem;
     bottom: -10%;
-    right: 0.5rem;
+    right: 0;
     cursor: pointer;
     -webkit-box-shadow: rgba(0,0,0,0.8) 0px 0 2px;
     -moz-box-shadow: rgba(0,0,0,0.8) 0 0 2px;
     box-shadow: rgba(0,0,0,0.8) 0 0 2px;
     transition: bottom .5s ease-in;
+    transform: translate(-50%);
 }
 
 .show-btn{
