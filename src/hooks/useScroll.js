@@ -1,9 +1,9 @@
 import { useState } from 'react'
 
-const useScrollGoUp = () => {
+const useScroll = () => {
 	let [showUp, changeShowUp] = useState(false)
 
-	const isScrolledGoUp = () => {
+	const isScrolled = () => {
 		if (window.scrollY > 60) {
 			changeShowUp(true)
 		} else {
@@ -11,7 +11,7 @@ const useScrollGoUp = () => {
 		}
 	}
 
-	return [showUp, isScrolledGoUp]
+	return [showUp, isScrolled]
 }
 
-export default useScrollGoUp
+export default useScroll

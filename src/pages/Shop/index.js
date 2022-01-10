@@ -1,14 +1,21 @@
 import './style.css'
 import { NavLink } from 'react-router-dom'
 import Target from '../../components/Target'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import GoUp from '../../components/GoUp'
-import useScrollGoUp from '../../hooks/useScrollGoUp'
+import useScroll from '../../hooks/useScroll'
 
 export default function ShopMain(props) {
-	let [showUp, isScrolledGoUp] = useScrollGoUp()
+	let [showUp, isScrolled] = useScroll()
 
-	let [showProducts, changeShowProducts] = useState(false)
+	let [clickeado, setClickeado] = useState(false)
+
+	const clickear = () => {
+		setClickeado(!clickeado)
+		props.cerrar()
+	}
+
+	window.addEventListener('scroll', isScrolled)
 
 	let tarjetas = allComponents
 		.filter(item => {
@@ -41,15 +48,6 @@ export default function ShopMain(props) {
 			)
 		})
 	}
-
-	const [clickeado, setClickeado] = useState(false)
-
-	const clickear = () => {
-		setClickeado(!clickeado)
-		props.cerrar()
-	}
-
-	window.addEventListener('scroll', isScrolledGoUp)
 
 	return (
 		<>
