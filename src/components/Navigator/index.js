@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom'
 import './nav.css'
 
-function Navigator(props) {
+function NavigatorL(props) {
 	return (
-		<nav className="navigator">
+		<nav className='navigator'>
 			<Link
 				to='/shopping_cart/'
 				className='title-nav'
@@ -12,7 +12,10 @@ function Navigator(props) {
 			</Link>
 			<ul className='list-links-nav'>
 				<li className='list-li-nav'>
-					<Link to='/shop/all' className='list-hiper-nav' onClick={() => props.cerrar()}>
+					<Link
+						to='/shop/all'
+						className='list-hiper-nav'
+						onClick={() => props.cerrar()}>
 						SHOP
 					</Link>
 				</li>

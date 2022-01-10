@@ -15,6 +15,10 @@ export default function ShopMain(props) {
 		props.cerrar()
 	}
 
+	useEffect(() => {
+		if (showUp) setClickeado(false)
+	}, [showUp])
+
 	window.addEventListener('scroll', isScrolled)
 
 	let tarjetas = allComponents
@@ -50,79 +54,77 @@ export default function ShopMain(props) {
 	}
 
 	return (
-		<>
-			<section className='main-shop'>
-				<div className='main-shop-navigator'>
-					<header className='main-shop-navigator-products'>
-						<h4 className='main-shop-navigator-products-title'>PRODUCTS</h4>
-						<div
-							className='main-shop-navigator-products-menu-btn'
-							onClick={() => clickear()}>
-							<svg viewBox='0 0 100 80' width='25' height='25'>
-								<rect width='100' height='20'></rect>
-								<rect y='30' width='100' height='20'></rect>
-								<rect y='60' width='100' height='20'></rect>
-							</svg>
-						</div>
-					</header>
-					<ul
-						className={
-							clickeado
-								? 'main-shop-navigator-list main-shop-navigator-list-show'
-								: 'main-shop-navigator-list'
-						}>
-						<li className='main-shop-navigator-list-option'>
-							<NavLink
-								className='main-shop-navigator-list-option-hiperlink'
-								to='/shop/all'
-								onClick={() => clickear()}
-								activeClassName='active'>
-								All
-							</NavLink>
-						</li>
-						<li className='main-shop-navigator-list-option'>
-							<NavLink
-								className='main-shop-navigator-list-option-hiperlink'
-								to='/shop/memory'
-								onClick={() => clickear()}
-								activeClassName='active'>
-								Memory
-							</NavLink>
-						</li>
-						<li className='main-shop-navigator-list-option'>
-							<NavLink
-								className='main-shop-navigator-list-option-hiperlink'
-								to='/shop/motherboards'
-								onClick={() => clickear()}
-								activeClassName='active'>
-								Motherboards
-							</NavLink>
-						</li>
-						<li className='main-shop-navigator-list-option'>
-							<NavLink
-								className='main-shop-navigator-list-option-hiperlink'
-								to='/shop/video_card'
-								onClick={() => clickear()}
-								activeClassName='active'>
-								Video Card
-							</NavLink>
-						</li>
-						<li className='main-shop-navigator-list-option'>
-							<NavLink
-								className='main-shop-navigator-list-option-hiperlink'
-								to='/shop/processor'
-								onClick={() => clickear()}
-								activeClassName='active'>
-								Processors
-							</NavLink>
-						</li>
-					</ul>
-				</div>
+		<section className='main-shop'>
+			<div className='main-shop-navigator'>
+				<header className='main-shop-navigator-products'>
+					<h4 className='main-shop-navigator-products-title'>PRODUCTS</h4>
+					<div
+						className='main-shop-navigator-products-menu-btn'
+						onClick={() => clickear()}>
+						<svg viewBox='0 0 100 80' width='25' height='25'>
+							<rect width='100' height='20'></rect>
+							<rect y='30' width='100' height='20'></rect>
+							<rect y='60' width='100' height='20'></rect>
+						</svg>
+					</div>
+				</header>
+				<ul
+					className={
+						clickeado
+							? 'main-shop-navigator-list main-shop-navigator-list-show'
+							: 'main-shop-navigator-list'
+					}>
+					<li className='main-shop-navigator-list-option'>
+						<NavLink
+							className='main-shop-navigator-list-option-hiperlink'
+							to='/shop/all'
+							onClick={() => clickear()}
+							activeClassName='active'>
+							All
+						</NavLink>
+					</li>
+					<li className='main-shop-navigator-list-option'>
+						<NavLink
+							className='main-shop-navigator-list-option-hiperlink'
+							to='/shop/memory'
+							onClick={() => clickear()}
+							activeClassName='active'>
+							Memory
+						</NavLink>
+					</li>
+					<li className='main-shop-navigator-list-option'>
+						<NavLink
+							className='main-shop-navigator-list-option-hiperlink'
+							to='/shop/motherboards'
+							onClick={() => clickear()}
+							activeClassName='active'>
+							Motherboards
+						</NavLink>
+					</li>
+					<li className='main-shop-navigator-list-option'>
+						<NavLink
+							className='main-shop-navigator-list-option-hiperlink'
+							to='/shop/video_card'
+							onClick={() => clickear()}
+							activeClassName='active'>
+							Video Card
+						</NavLink>
+					</li>
+					<li className='main-shop-navigator-list-option'>
+						<NavLink
+							className='main-shop-navigator-list-option-hiperlink'
+							to='/shop/processor'
+							onClick={() => clickear()}
+							activeClassName='active'>
+							Processors
+						</NavLink>
+					</li>
+				</ul>
+			</div>
 
-				<section className='main-shop-navigator-bottom'>{tarjetas}</section>
-				<GoUp show={showUp} />
-			</section>
-		</>
+			<section className='main-shop-navigator-bottom'>{tarjetas}</section>
+			<GoUp show={showUp} />
+		</section>
 	)
 }
 
