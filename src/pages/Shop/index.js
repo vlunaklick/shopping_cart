@@ -3,9 +3,12 @@ import { NavLink } from 'react-router-dom'
 import Target from '../../components/Target'
 import { useState } from 'react'
 import GoUp from '../../components/GoUp'
+import useScrollGoUp from '../../hooks/useScrollGoUp'
 
 export default function ShopMain(props) {
-	let [showUp, changeShowUp] = useState(false)
+	let [showUp, isScrolledGoUp] = useScrollGoUp()
+
+	let [showProducts, changeShowProducts] = useState(false)
 
 	let tarjetas = allComponents
 		.filter(item => {
@@ -46,15 +49,7 @@ export default function ShopMain(props) {
 		props.cerrar()
 	}
 
-	const isScrolled = () => {
-		if (window.scrollY > 60) {
-			changeShowUp(true)
-		} else {
-			changeShowUp(false)
-		}
-	}
-
-	window.addEventListener('scroll', isScrolled)
+	window.addEventListener('scroll', isScrolledGoUp)
 
 	return (
 		<>
