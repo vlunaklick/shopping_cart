@@ -18,6 +18,13 @@ export default function RouterPages() {
 
 	let [compP, addOneP, resetOneP, resOneP] = useItems()
 
+	let [clickeado, setClickeado] = useState(false)
+
+	const clickear = () => {
+		setClickeado(!clickeado)
+		cerraCarro()
+	}
+
 	const resetAll = () => {
 		resetOneP()
 		changeTot(0)
@@ -52,7 +59,9 @@ export default function RouterPages() {
 								muestra='all'
 								sumar={addOneP}
 								restar={resOneP}
-								cerrar={cerraCarro}
+								clickear={clickear}
+								setClickeado={setClickeado}
+								clickeado={clickeado}
 							/>
 						</Route>
 						<Route exact path='/shop/motherboards'>
@@ -60,7 +69,9 @@ export default function RouterPages() {
 								muestra='motherboards'
 								sumar={addOneP}
 								restar={resOneP}
-								cerrar={cerraCarro}
+								clickear={clickear}
+								setClickeado={setClickeado}
+								clickeado={clickeado}
 							/>
 						</Route>
 						<Route exact path='/shop/video_card'>
@@ -68,7 +79,9 @@ export default function RouterPages() {
 								muestra='video_card'
 								sumar={addOneP}
 								restar={resOneP}
-								cerrar={cerraCarro}
+								clickear={clickear}
+								setClickeado={setClickeado}
+								clickeado={clickeado}
 							/>
 						</Route>
 						<Route exact path='/shop/processor'>
@@ -76,7 +89,9 @@ export default function RouterPages() {
 								muestra='processor'
 								sumar={addOneP}
 								restar={resOneP}
-								cerrar={cerraCarro}
+								clickear={clickear}
+								setClickeado={setClickeado}
+								clickeado={clickeado}
 							/>
 						</Route>
 						<Route exact path='/shop/memory'>
@@ -84,7 +99,9 @@ export default function RouterPages() {
 								muestra='memory'
 								sumar={addOneP}
 								restar={resOneP}
-								cerrar={cerraCarro}
+								clickear={clickear}
+								setClickeado={setClickeado}
+								clickeado={clickeado}
 							/>
 						</Route>
 						<Route path='*'>
