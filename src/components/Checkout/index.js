@@ -1,8 +1,8 @@
-import './styles.css'
+import styled from 'styled-components'
 import TargetCheck from '../TargetCheck'
 import { Link } from 'react-router-dom'
 
-export default function Checkout(props) {
+function CheckoutS(props) {
 	let tarjetasCheck = allComponents
 		.filter(item => {
 			return props.productos[item.nameU] !== 0
@@ -23,16 +23,13 @@ export default function Checkout(props) {
 
 	return (
 		<>
-			<aside
-				className={
-					props.valor ? 'check-main check-main-movement' : 'check-main'
-				}>
+			<aside className={props.className}>
 				<div className='check-header-container'>
-					<header className='check-header'>
+					<header>
 						<h3>CART</h3>
 						<svg
+							className='cross-check'
 							onClick={() => props.cambiar()}
-							className='check-cross-btn'
 							xmlns='http://www.w3.org/2000/svg'
 							width='20'
 							height='20'
@@ -40,25 +37,18 @@ export default function Checkout(props) {
 							<path d='M24 20.188l-8.315-8.209 8.2-8.282-3.697-3.697-8.212 8.318-8.31-8.203-3.666 3.666 8.321 8.24-8.206 8.313 3.666 3.666 8.237-8.318 8.285 8.203z' />
 						</svg>
 					</header>
-					<h4 className='check-subtotal'>
-						{' '}
-						Subtotal: ${Math.floor(props.totalP * 100) / 100}
-					</h4>
+					<h6> Subtotal: ${Math.floor(props.totalP * 100) / 100}</h6>
 				</div>
 
 				{tarjetasCheck.length === 0 ? (
-					<section className='check-section-items'>
+					<section>
 						<div className='check-message-empty'>
-							<h1 className='check-message-top-part'>Sorry!</h1>
-							<h1 className='check-message-bottom-part'>
-								There is no item in the cart.{' '}
-							</h1>
+							<h4>Sorry!</h4>
+							<h5>There is no item in the cart. </h5>
 						</div>
 					</section>
 				) : (
-					<section className='check-section-items check-overflowy'>
-						{tarjetasCheck}
-					</section>
+					<section className='check-overflowy'>{tarjetasCheck}</section>
 				)}
 
 				{tarjetasCheck.length > 0 ? (
@@ -74,6 +64,175 @@ export default function Checkout(props) {
 		</>
 	)
 }
+
+const Checkout = styled(CheckoutS)`
+	display: flex;
+	min-height: calc(100vh);
+	height: 100%;
+	width: 31.25rem;
+	position: fixed;
+	top: 0;
+	right: ${props => (props.valor ? '0%' : '-100%')};
+	z-index: 4;
+	background-color: #f8fafc;
+	box-shadow: -4px 0px 5px -5px rgba(0, 0, 0, 1);
+	transition: opacity 0.75s ease-in, right 0.75s ease-in;
+	opacity: ${props => (props.valor ? '1' : '0')};
+	flex-direction: column;
+
+	section {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 2rem;
+		padding: 1rem 0;
+		width: 100%;
+		max-height: calc(100vh - 12.519rem);
+		margin-bottom: 0.5rem;
+	}
+
+	div {
+		display: flex;
+	}
+
+	.check-header-container {
+		background-color: #e2e8f0;
+		min-width: 13.75rem;
+	}
+
+	.check-overflowy {
+		overflow-y: visible;
+		overflow-x: hidden;
+	}
+
+	.check-header-container {
+		display: flex;
+		flex-direction: column;
+		background-color: #e2e8f0;
+		min-width: 13.75rem;
+	}
+
+	.check-header-container,
+	.check-message-empty {
+		flex-direction: column;
+	}
+
+	header {
+		font-size: 1.2rem;
+		margin: 0;
+		padding: 0.62rem 1rem;
+		background-color: #cbd5e1;
+		text-align: center;
+		color: #1e293b;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.check-header-container {
+		display: flex;
+		flex-direction: column;
+		background-color: #e2e8f0;
+		min-width: 13.75rem;
+	}
+
+	.cross-check {
+		position: absolute;
+		right: 1rem;
+		cursor: pointer;
+		fill: #1e293b;
+	}
+
+	h4 {
+		font-size: 7rem;
+		text-align: center;
+	}
+
+	h5 {
+		text-align: center;
+	}
+
+	h6 {
+		padding: 0.6rem 0;
+		color: #1e293b;
+		text-align: center;
+		font-size: 1rem;
+	}
+
+	.check-btn-center {
+		justify-content: center;
+	}
+
+	.check-btn {
+		border-radius: 1.875rem;
+		border: none;
+		width: 9rem;
+		height: 3rem;
+		font-size: 0.938rem;
+		font-weight: 800;
+		background-color: #d2ddf7;
+		color: #1e293b;
+		transition: 0.25s;
+		cursor: pointer;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		bottom: 1.3rem;
+	}
+
+	.check-btn:hover {
+		background-color: #b9c0d3;
+		box-shadow: 0 0 2px #00000069;
+	}
+
+	@media (max-width: 830px) {
+		display: block;
+		min-height: 0;
+		width: 20rem;
+
+		header {
+			width: 100%;
+			text-align: center;
+			padding: 0.64rem 0;
+			font-size: 1rem;
+		}
+		.check-header-container {
+			justify-content: center;
+			align-items: center;
+			margin-bottom: 1rem;
+		}
+		section {
+			max-height: calc(100vh - 12.519rem);
+			margin-bottom: 0.25rem;
+		}
+
+		svg {
+			right: 1rem;
+		}
+		.check-btn {
+			width: 6.25rem;
+			height: 2.1875rem;
+			font-size: 0.75rem;
+			display: flex;
+			position: absolute;
+			bottom: 0.8rem;
+		}
+		h4 {
+			font-size: 4rem;
+		}
+		h5 {
+			font-size: 1rem;
+			text-align: center;
+		}
+		h6 {
+			font-size: 1rem;
+			padding: 0.62rem;
+		}
+	}
+`
+
+export default Checkout
 
 let allComponents = [
 	{

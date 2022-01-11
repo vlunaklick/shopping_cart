@@ -61,6 +61,7 @@ function TargetCheckL(props) {
 
 const TargetCheck = styled(TargetCheckL)`
 	filter: drop-shadow(0px 0.4px 0.5px hsl(210deg 12% 60% / 0.34));
+	flex-direction: column;
 
 	.target-top-part {
 		width: 17.5rem;
