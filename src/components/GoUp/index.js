@@ -1,10 +1,10 @@
-import './goUp.css'
+import styled from 'styled-components'
 
-function GoUp({ show }) {
+function GoUpS(props) {
 	return (
 		<>
 			<span
-				className={show ? 'goup-btn show-btn' : 'goup-btn'}
+				className={props.className}
 				onClick={() =>
 					window.scrollTo({
 						top: 0,
@@ -13,7 +13,6 @@ function GoUp({ show }) {
 					})
 				}>
 				<svg
-					className='goup-arrow'
 					xmlns='http://www.w3.org/2000/svg'
 					width='16'
 					height='16'
@@ -24,5 +23,31 @@ function GoUp({ show }) {
 		</>
 	)
 }
+
+const GoUp = styled(GoUpS)`
+	background-color: #475569;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	position: fixed;
+	padding: 0.5rem;
+	bottom: ${props => (props.show ? '1rem' : '-10%')};
+	right: 0;
+	cursor: pointer;
+	-webkit-box-shadow: rgba(0, 0, 0, 0.8) 0px 0 2px;
+	-moz-box-shadow: rgba(0, 0, 0, 0.8) 0 0 2px;
+	box-shadow: rgba(0, 0, 0, 0.8) 0 0 2px;
+	transition: bottom 0.5s ease-in;
+	transform: translate(-50%);
+
+	svg {
+		transform: rotate(-90deg);
+		fill: white;
+	}
+	svg:hover {
+		background-color: #334155;
+	}
+`
 
 export default GoUp
