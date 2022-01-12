@@ -125,8 +125,10 @@ function ShopMainS({
 }
 
 const ShopMain = styled(ShopMainS)`
-	min-height: calc(100vh - 3.363rem);
+	min-height: calc(100vh - 3.3625rem);
 	height: 100%;
+	background-color: ${({ theme }) => theme.shop.bgColor};
+	transition: background-color 0.5s ease-in;
 
 	.main-shop-navigator {
 		display: flex;
@@ -143,8 +145,6 @@ const ShopMain = styled(ShopMainS)`
 		gap: 2rem;
 		padding: 1rem 0;
 		width: 100%;
-		background-color: ${({ theme }) => theme.shop.bgColor};
-		transition: background-color 0.5s ease-in;
 	}
 
 	ul {
@@ -209,7 +209,7 @@ const ShopMain = styled(ShopMainS)`
 
 	@media (max-width: 949px) {
 		display: block;
-		min-height: calc(100vh - 9.079rem);
+		min-height: calc(100vh - 3.0625rem);
 
 		ul {
 			position: absolute;
