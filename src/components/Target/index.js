@@ -60,12 +60,13 @@ const Target = styled(TargetL)`
 	.target-top-part {
 		width: 17.5rem;
 		height: 17.5rem;
-		background-color: #cbd5e1;
+		background-color: ${({ theme }) => theme.target.targetTopBg};
 		border-top-left-radius: 0.313rem;
 		border-top-right-radius: 0.313rem;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		transition: background-color 0.5s ease-in;
 	}
 	img {
 		width: 90%;
@@ -75,9 +76,10 @@ const Target = styled(TargetL)`
 	}
 	h5,
 	p {
-		color: #f8fafc;
+		color: ${({ theme }) => theme.target.colorP};
 		font-weight: 400;
 		line-height: 1rem;
+		transition: color 0.5s ease-in;
 	}
 	h5 {
 		font-size: 1rem;
@@ -89,12 +91,13 @@ const Target = styled(TargetL)`
 	.target-bottom-part {
 		width: 17.5rem;
 		height: 4.25rem;
-		background-color: #94a3b8;
+		background-color: ${({ theme }) => theme.target.targetBottomBg};
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		border-bottom-left-radius: 0.313rem;
 		border-bottom-right-radius: 0.313rem;
+		transition: background-color 0.5s ease-in;
 	}
 	.target-bottom-part-text {
 		display: flex;
@@ -112,16 +115,18 @@ const Target = styled(TargetL)`
 		height: 1.813rem;
 		border-bottom-left-radius: 0.313rem;
 		border-top-left-radius: 0.313rem;
-		background-color: #f1f5f9;
+		background-color: ${({ theme }) => theme.target.targetBottomButton};
 		cursor: pointer;
+		transition: background-color 0.5s ease-in;
 	}
 	.target-bottom-part-btn-rigth {
 		width: 2.875rem;
 		height: 1.813rem;
 		border-bottom-right-radius: 0.313rem;
 		border-top-right-radius: 0.313rem;
-		background-color: #f1f5f9;
+		background-color: ${({ theme }) => theme.target.targetBottomButton};
 		cursor: pointer;
+		transition: background-color 0.5s ease-in;
 	}
 	.target-bottom-part-btn-rigth,
 	.target-bottom-part-btn-left {
@@ -132,10 +137,13 @@ const Target = styled(TargetL)`
 	}
 	.target-bottom-part-btn-rigth:hover,
 	.target-bottom-part-btn-left:hover {
-		background-color: rgb(195, 210, 223);
+		background-color: ${({ theme }) => theme.target.targetBootomButtonHover};
+		transition: background-color 0.5s ease-in;
 	}
 	svg {
 		width: 0.875rem;
+		color: ${({ theme }) => theme.target.svgColor};
+		transition: color 0.5s ease-in;
 	}
 `
 

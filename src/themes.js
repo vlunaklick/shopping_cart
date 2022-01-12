@@ -29,6 +29,14 @@ export const ligthTheme = {
 		headerBg: '#cbd5e1',
 		navColor: '#1E293B',
 	},
+	target: {
+		targetTopBg: '#cbd5e1',
+		colorP: '#1F1F1F',
+		targetBottomBg: '#94a3b8',
+		targetBottomButton: '#f1f5f9',
+		targetBootomButtonHover: 'rgb(195, 210, 223)',
+		svgColor: '#1F1F1F',
+	},
 }
 
 export const darkTheme = {
@@ -61,5 +69,13 @@ export const darkTheme = {
 		bgActivHiper: '#3D3D3D',
 		headerBg: '#1F1F1F',
 		navColor: '#fff',
+	},
+	target: {
+		targetTopBg: '#797979',
+		colorP: '#f8fafc',
+		targetBottomBg: '#5B5B5B',
+		targetBottomButton: '#3D3D3D',
+		targetBootomButtonHover: '#1F1F1F',
+		svgColor: '#f8fafc',
 	},
 }
