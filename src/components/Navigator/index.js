@@ -31,7 +31,11 @@ function NavigatorL(props) {
 					</li>
 
 					<li id='gap-cart-nav'>
-						<span onClick={() => props.carrito()}>
+						<span
+							onClick={() => {
+								props.carrito()
+								props.cerrar()
+							}}>
 							<svg
 								width='25'
 								height='25'
