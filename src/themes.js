@@ -10,6 +10,7 @@ export const ligthTheme = {
 		button: 'linear-gradient(to right, #2193b0, #6dd5ed)',
 		buttonText: '#fff',
 		buttonShadow: '0 0 2px rgba(0, 0, 0, 0.5)',
+		bgColorSvg: '#0a588c',
 	},
 	cart: {
 		checkoutBg: '#68BEB0',
@@ -59,6 +60,7 @@ export const darkTheme = {
 		button: 'linear-gradient(to right, #3ca55c, #b5ac49)',
 		buttonText: '#1f1f1f',
 		buttonShadow: '0 0 2px rgba(255, 255, 255, 0.5)',
+		bgColorSvg: '#121212',
 	},
 	cart: {
 		checkoutBg: '#717171',

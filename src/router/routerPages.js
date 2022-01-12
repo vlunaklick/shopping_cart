@@ -63,7 +63,7 @@ export default function RouterPages() {
 				/>
 				<Switch>
 					<Route exact path='/shopping_cart/'>
-						<HomeShow cerrar={cerraCarro} />
+						<HomeShow cerrar={cerraCarro} themeOn={theme} />
 					</Route>
 
 					<Route path='/shop'>

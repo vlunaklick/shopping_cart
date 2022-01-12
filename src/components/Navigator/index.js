@@ -18,7 +18,7 @@ function NavigatorL(props) {
 						<label htmlFor='ligthdark' onClick={() => props.changeTheme()}>
 							<BsMoonFill className='icono' />
 							<BsFillSunFill id='sun' />
-							<div class='ball'></div>
+							<div className='ball'></div>
 						</label>
 					</li>
 					<li>
