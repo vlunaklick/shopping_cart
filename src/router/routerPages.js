@@ -63,6 +63,7 @@ export default function RouterPages() {
 					cant={cantP}
 					carrito={cambiarCarro}
 					cerrar={cerrarAmbos}
+					cerrarProd={setClickeado}
 					themeOn={theme}
 					changeTheme={changeTheme}
 				/>

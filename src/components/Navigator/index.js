@@ -34,7 +34,7 @@ function NavigatorL(props) {
 						<span
 							onClick={() => {
 								props.carrito()
-								props.cerrar()
+								props.cerrarProd(false)
 							}}>
 							<svg
 								width='25'
