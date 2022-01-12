@@ -1,11 +1,11 @@
-export const ligthTheme = {
+export const lightTheme = {
 	navigator: {
 		navBgColor: '#0a588c',
-		darkligthColor: '#2680C2',
+		darklightColor: '#2680C2',
 		quantityColor: '#186FAF',
 	},
 	mainIndex: {
-		svg: 'ligth',
+		svg: 'light',
 		bgColor: '#186FAF',
 		button: 'linear-gradient(to right, #2193b0, #6dd5ed)',
 		buttonText: '#fff',
@@ -51,7 +51,7 @@ export const ligthTheme = {
 export const darkTheme = {
 	navigator: {
 		navBgColor: '#121212',
-		darkligthColor: 'rgba(255, 255, 255, 0.16)',
+		darklightColor: 'rgba(255, 255, 255, 0.16)',
 		quantityColor: 'rgba(255, 255, 255, 0.08)',
 	},
 	mainIndex: {

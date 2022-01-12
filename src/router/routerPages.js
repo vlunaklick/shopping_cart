@@ -9,7 +9,7 @@ import Checkout from '../components/Checkout'
 import useItems from '../hooks/useItems'
 import useCarro from '../hooks/useCarro'
 import { ThemeProvider } from 'styled-components'
-import { ligthTheme, darkTheme } from '../themes'
+import { lightTheme, darkTheme } from '../themes'
 
 export default function RouterPages() {
 	let [cantP, changeCant] = useState(0)
@@ -22,10 +22,10 @@ export default function RouterPages() {
 
 	let [clickeado, setClickeado] = useState(false)
 
-	let [theme, setTheme] = useState('ligth')
+	let [theme, setTheme] = useState('light')
 
 	const changeTheme = () => {
-		theme === 'ligth' ? setTheme('dark') : setTheme('ligth')
+		theme === 'light' ? setTheme('dark') : setTheme('light')
 	}
 
 	const clickear = () => {
@@ -53,7 +53,7 @@ export default function RouterPages() {
 
 	return (
 		<Router>
-			<ThemeProvider theme={theme === 'ligth' ? ligthTheme : darkTheme}>
+			<ThemeProvider theme={theme === 'light' ? lightTheme : darkTheme}>
 				<Navigator
 					cant={cantP}
 					carrito={cambiarCarro}

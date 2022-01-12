@@ -14,8 +14,8 @@ function NavigatorL(props) {
 				</Link>
 				<ul>
 					<li>
-						<input type='checkbox' name='ligthdark' id='ligthdark' />
-						<label htmlFor='ligthdark' onClick={() => props.changeTheme()}>
+						<input type='checkbox' name='lightdark' id='lightdark' />
+						<label htmlFor='lightdark' onClick={() => props.changeTheme()}>
 							<BsMoonFill className='icono' />
 							<BsFillSunFill id='sun' />
 							<div className='ball'></div>
@@ -79,7 +79,7 @@ const Navigator = styled(NavigatorL)`
 		left: 2px;
 		transition: transform 0.3s ease-in;
 		transform: ${props =>
-			props.themeOn === 'ligth' ? 'translate(0)' : 'translate(24px)'};
+			props.themeOn === 'light' ? 'translate(0)' : 'translate(24px)'};
 	}
 
 	.icono,
@@ -93,7 +93,7 @@ const Navigator = styled(NavigatorL)`
 		height: 1.625rem;
 		padding: 5px;
 		cursor: pointer;
-		background-color: ${({ theme }) => theme.navigator.darkligthColor};
+		background-color: ${({ theme }) => theme.navigator.darklightColor};
 		border-radius: 3.125rem;
 		display: flex;
 		color: #fff;
@@ -187,7 +187,7 @@ const Navigator = styled(NavigatorL)`
 			width: 17.6px;
 			height: 17.6px;
 			transform: ${props =>
-				props.themeOn === 'ligth' ? 'translate(0px)' : 'translate(19px)'};
+				props.themeOn === 'light' ? 'translate(0px)' : 'translate(19px)'};
 		}
 		.icono,
 		#sun {
