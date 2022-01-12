@@ -66,12 +66,13 @@ const TargetCheck = styled(TargetCheckL)`
 	.target-top-part {
 		width: 17.5rem;
 		height: 17.5rem;
-		background-color: #cbd5e1;
+		background-color: ${({ theme }) => theme.target.targetTopBg};
 		border-top-left-radius: 0.313rem;
 		border-top-right-radius: 0.313rem;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		transition: background-color 0.5s ease-in;
 	}
 	img {
 		width: 90%;
@@ -82,29 +83,33 @@ const TargetCheck = styled(TargetCheckL)`
 	h5 {
 		font-size: 1rem;
 		font-weight: 600;
-		color: #f8fafc;
+		color: ${({ theme }) => theme.target.colorP};
+		transition: color 0.5s ease-in;
 	}
 	p {
 		margin-left: 0.5rem;
 		font-size: 0.6rem;
-		color: #f8fafc;
+		color: ${({ theme }) => theme.target.colorP};
+		transition: color 0.5s ease-in;
 	}
 	.target-bottom-check-part {
 		width: 17.5rem;
 		height: 4.25rem;
-		background-color: #94a3b8;
+		background-color: ${({ theme }) => theme.target.targetBottomBg};
 		display: flex;
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
 		border-bottom-left-radius: 0.3125rem;
 		border-bottom-right-radius: 0.3125rem;
+		transition: background-color 0.5s ease-in;
 	}
 	.target-bottom-check-part-price {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		color: #1e293b;
+		color: ${({ theme }) => theme.target.colorP};
+		transition: color 0.5s ease-in;
 	}
 	.target-bottom-part-btn {
 		display: flex;
@@ -116,16 +121,18 @@ const TargetCheck = styled(TargetCheckL)`
 		height: 1.813rem;
 		border-bottom-left-radius: 0.313rem;
 		border-top-left-radius: 0.313rem;
-		background-color: #f1f5f9;
+		background-color: ${({ theme }) => theme.target.targetBottomButton};
 		cursor: pointer;
+		transition: background-color 0.5s ease-in;
 	}
 	.target-bottom-part-btn-rigth {
 		width: 2.875rem;
 		height: 1.813rem;
 		border-bottom-right-radius: 0.313rem;
 		border-top-right-radius: 0.313rem;
-		background-color: #f1f5f9;
+		background-color: ${({ theme }) => theme.target.targetBottomButton};
 		cursor: pointer;
+		transition: background-color 0.5s ease-in;
 	}
 	.target-bottom-part-btn-rigth,
 	.target-bottom-part-btn-left {
@@ -136,7 +143,8 @@ const TargetCheck = styled(TargetCheckL)`
 	}
 	.target-bottom-part-btn-rigth:hover,
 	.target-bottom-part-btn-left:hover {
-		background-color: rgb(195, 210, 223);
+		background-color: ${({ theme }) => theme.target.targetBootomButtonHover};
+		transition: background-color 0.5s ease-in;
 	}
 	.target-bottom-check-part-quantity {
 		width: 2.875rem;

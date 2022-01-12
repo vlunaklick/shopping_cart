@@ -37,6 +37,14 @@ export const ligthTheme = {
 		targetBootomButtonHover: 'rgb(195, 210, 223)',
 		svgColor: '#1F1F1F',
 	},
+	targetCheck: {
+		targetTopBg: '#cbd5e1',
+		colorP: '#1F1F1F',
+		targetBottomBg: '#94a3b8',
+		targetBottomButton: '#f1f5f9',
+		targetBootomButtonHover: 'rgb(195, 210, 223)',
+		svgColor: '#1F1F1F',
+	},
 }
 
 export const darkTheme = {
