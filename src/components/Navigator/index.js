@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
+import { BsMoonFill, BsFillSunFill } from 'react-icons/bs'
 
 function NavigatorL(props) {
 	return (
@@ -12,6 +13,14 @@ function NavigatorL(props) {
 					Gaming Store
 				</Link>
 				<ul>
+					<li>
+						<input type='checkbox' name='ligthdark' id='ligthdark' />
+						<label htmlFor='ligthdark' onClick={() => props.changeTheme()}>
+							<BsMoonFill className='icono' />
+							<BsFillSunFill id='sun' />
+							<div class='ball'></div>
+						</label>
+					</li>
 					<li>
 						<Link
 							id='list-hiper-nav'
@@ -45,10 +54,53 @@ function NavigatorL(props) {
 const Navigator = styled(NavigatorL)`
 	display: flex;
 	padding: 0.4rem 0.72657rem;
-	background-color: #90a7bb;
+	background-color: ${({ theme }) => theme.navigator.navBgColor};
 	z-index: 3;
 	position: sticky;
 	top: 0;
+	transition: background-color 0.5s ease-in;
+
+	#sun {
+		color: #f1c40f;
+	}
+
+	input {
+		opacity: 0;
+		position: absolute;
+	}
+
+	.ball {
+		background-color: #fff;
+		width: 22px;
+		height: 22px;
+		border-radius: 50%;
+		position: absolute;
+		top: 2px;
+		left: 2px;
+		transition: transform 0.3s ease-in;
+		transform: ${props =>
+			props.themeOn === 'ligth' ? 'translate(0)' : 'translate(24px)'};
+	}
+
+	.icono,
+	#sun {
+		height: 16px;
+		width: 16px;
+	}
+
+	label {
+		width: 3.125rem;
+		height: 1.625rem;
+		padding: 5px;
+		cursor: pointer;
+		background-color: ${({ theme }) => theme.navigator.darkligthColor};
+		border-radius: 3.125rem;
+		display: flex;
+		color: #fff;
+		justify-content: space-between;
+		position: relative;
+		transition: background-color 0.5s ease-in;
+	}
 
 	li {
 		list-style: none;
@@ -101,11 +153,12 @@ const Navigator = styled(NavigatorL)`
 	}
 
 	p {
-		background-color: #64748b;
+		background-color: ${({ theme }) => theme.navigator.quantityColor};
 		border-radius: 1.875rem;
 		color: #fff;
 		font-size: 0.7rem;
 		padding: 0.2rem 0.4rem;
+		transition: background-color 0.5s ease-in;
 	}
 
 	@media (max-width: 740px) {
@@ -124,6 +177,22 @@ const Navigator = styled(NavigatorL)`
 		}
 		#list-hiper-nav {
 			font-size: 0.75rem;
+		}
+		label {
+			width: 40px;
+			height: 20.8px;
+		}
+		.ball {
+			top: 1.4px;
+			width: 17.6px;
+			height: 17.6px;
+			transform: ${props =>
+				props.themeOn === 'ligth' ? 'translate(0px)' : 'translate(19px)'};
+		}
+		.icono,
+		#sun {
+			height: 12px;
+			width: 12px;
 		}
 	}
 `

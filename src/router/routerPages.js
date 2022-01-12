@@ -8,6 +8,8 @@ import ShopMain from '../pages/Shop'
 import Checkout from '../components/Checkout'
 import useItems from '../hooks/useItems'
 import useCarro from '../hooks/useCarro'
+import { ThemeProvider } from 'styled-components'
+import { ligthTheme, darkTheme } from '../themes'
 
 export default function RouterPages() {
 	let [cantP, changeCant] = useState(0)
@@ -19,6 +21,12 @@ export default function RouterPages() {
 	let [compP, addOneP, resetOneP, resOneP] = useItems()
 
 	let [clickeado, setClickeado] = useState(false)
+
+	let [theme, setTheme] = useState('ligth')
+
+	const changeTheme = () => {
+		theme === 'ligth' ? setTheme('dark') : setTheme('ligth')
+	}
 
 	const clickear = () => {
 		setClickeado(!clickeado)
@@ -45,84 +53,91 @@ export default function RouterPages() {
 
 	return (
 		<Router>
-			<Navigator cant={cantP} carrito={cambiarCarro} cerrar={cerraCarro} />
+			<ThemeProvider theme={theme === 'ligth' ? ligthTheme : darkTheme}>
+				<Navigator
+					cant={cantP}
+					carrito={cambiarCarro}
+					cerrar={cerraCarro}
+					themeOn={theme}
+					changeTheme={changeTheme}
+				/>
+				<Switch>
+					<Route exact path='/shopping_cart/'>
+						<HomeShow cerrar={cerraCarro} />
+					</Route>
 
-			<Switch>
-				<Route exact path='/shopping_cart/'>
-					<HomeShow cerrar={cerraCarro} />
-				</Route>
+					<Route path='/shop'>
+						<Switch>
+							<Route exact path='/shop/all'>
+								<ShopMain
+									muestra='all'
+									sumar={addOneP}
+									restar={resOneP}
+									clickear={clickear}
+									setClickeado={setClickeado}
+									clickeado={clickeado}
+								/>
+							</Route>
+							<Route exact path='/shop/motherboards'>
+								<ShopMain
+									muestra='motherboards'
+									sumar={addOneP}
+									restar={resOneP}
+									clickear={clickear}
+									setClickeado={setClickeado}
+									clickeado={clickeado}
+								/>
+							</Route>
+							<Route exact path='/shop/video_card'>
+								<ShopMain
+									muestra='video_card'
+									sumar={addOneP}
+									restar={resOneP}
+									clickear={clickear}
+									setClickeado={setClickeado}
+									clickeado={clickeado}
+								/>
+							</Route>
+							<Route exact path='/shop/processor'>
+								<ShopMain
+									muestra='processor'
+									sumar={addOneP}
+									restar={resOneP}
+									clickear={clickear}
+									setClickeado={setClickeado}
+									clickeado={clickeado}
+								/>
+							</Route>
+							<Route exact path='/shop/memory'>
+								<ShopMain
+									muestra='memory'
+									sumar={addOneP}
+									restar={resOneP}
+									clickear={clickear}
+									setClickeado={setClickeado}
+									clickeado={clickeado}
+								/>
+							</Route>
+							<Route path='*'>
+								<Error404 cerrar={cerraCarro} />
+							</Route>
+						</Switch>
+					</Route>
 
-				<Route path='/shop'>
-					<Switch>
-						<Route exact path='/shop/all'>
-							<ShopMain
-								muestra='all'
-								sumar={addOneP}
-								restar={resOneP}
-								clickear={clickear}
-								setClickeado={setClickeado}
-								clickeado={clickeado}
-							/>
-						</Route>
-						<Route exact path='/shop/motherboards'>
-							<ShopMain
-								muestra='motherboards'
-								sumar={addOneP}
-								restar={resOneP}
-								clickear={clickear}
-								setClickeado={setClickeado}
-								clickeado={clickeado}
-							/>
-						</Route>
-						<Route exact path='/shop/video_card'>
-							<ShopMain
-								muestra='video_card'
-								sumar={addOneP}
-								restar={resOneP}
-								clickear={clickear}
-								setClickeado={setClickeado}
-								clickeado={clickeado}
-							/>
-						</Route>
-						<Route exact path='/shop/processor'>
-							<ShopMain
-								muestra='processor'
-								sumar={addOneP}
-								restar={resOneP}
-								clickear={clickear}
-								setClickeado={setClickeado}
-								clickeado={clickeado}
-							/>
-						</Route>
-						<Route exact path='/shop/memory'>
-							<ShopMain
-								muestra='memory'
-								sumar={addOneP}
-								restar={resOneP}
-								clickear={clickear}
-								setClickeado={setClickeado}
-								clickeado={clickeado}
-							/>
-						</Route>
-						<Route path='*'>
-							<Error404 cerrar={cerraCarro} />
-						</Route>
-					</Switch>
-				</Route>
-
-				<Route path='*'>
-					<Error404 cerrar={cerraCarro} />
-				</Route>
-			</Switch>
-			<Checkout
-				productos={compP}
-				totalP={totalP}
-				sumar={addOneP}
-				restar={resOneP}
-				resetear={resetAll}
-				valor={carro}
-				cambiar={cerraCarro}
-			/>
+					<Route path='*'>
+						<Error404 cerrar={cerraCarro} />
+					</Route>
+				</Switch>
+				<Checkout
+					productos={compP}
+					totalP={totalP}
+					sumar={addOneP}
+					restar={resOneP}
+					resetear={resetAll}
+					valor={carro}
+					cambiar={cerraCarro}
+				/>
+			</ThemeProvider>
 		</Router>
 	)
 }

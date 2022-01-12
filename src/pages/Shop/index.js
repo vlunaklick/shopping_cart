@@ -229,7 +229,6 @@ const ShopMain = styled(ShopMainS)`
 		.main-shop-navigator {
 			justify-content: center;
 			align-items: center;
-			margin-bottom: 1rem;
 		}
 		.main-shop-navigator-list-option {
 			text-align: center;

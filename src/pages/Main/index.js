@@ -1,13 +1,14 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import imageLigth from '../../images/Vector.svg'
+import imageDark from '../../images/VectorDark.png'
+import imageBlue from '../../images/VectorBlue.png'
 
 function HomeShowS(props) {
 	return (
 		<>
 			<main className={props.className}>
 				<section className='main-home-panel-left'>
-					<div>
+					<div className='separator-panel'>
 						<div className='main-home-panel-left-text'>
 							<h3>Make your dream computer come true.</h3>
 							<h3>Be a real gamer.</h3>
@@ -32,7 +33,10 @@ function HomeShowS(props) {
 
 const HomeShow = styled(HomeShowS)`
 	min-height: calc(100vh - 3.363rem);
-	background-image: url(${imageLigth});
+	background-image: ${({ theme }) =>
+		theme.mainIndex.svg === 'ligth'
+			? `url(${imageBlue})`
+			: `url(${imageDark})`};
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -40,6 +44,15 @@ const HomeShow = styled(HomeShowS)`
 	align-items: center;
 	justify-content: center;
 	align-items: center;
+	background-color: ${({ theme }) => theme.mainIndex.bgColor};
+	-webkit-transition: background-image 0.2s ease-in-out;
+	transition: background-image 10s ease-in-out;
+
+	.separator-panel {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+	}
 
 	h3 {
 		font-weight: 100;
@@ -54,13 +67,14 @@ const HomeShow = styled(HomeShowS)`
 		height: 3rem;
 		font-size: 0.938rem;
 		font-weight: 800;
-		background-color: #e2e8f0;
-		color: #0f172a;
+		background-image: ${({ theme }) => theme.mainIndex.button};
+		color: ${({ theme }) => theme.mainIndex.buttonText};
 		transition: 0.25s;
 		cursor: pointer;
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		transition: background-image 0.5s ease-in, color 0.5s ease-in;
 	}
 
 	.main-home-panel-left-btn:hover {
