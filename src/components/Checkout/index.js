@@ -74,11 +74,12 @@ const Checkout = styled(CheckoutS)`
 	top: 0;
 	right: ${props => (props.valor ? '0%' : '-100%')};
 	z-index: 4;
-	background-color: #f8fafc;
 	box-shadow: -4px 0px 5px -5px rgba(0, 0, 0, 1);
-	transition: opacity 0.75s ease-in, right 0.75s ease-in;
 	opacity: ${props => (props.valor ? '1' : '0')};
 	flex-direction: column;
+	background-color: ${({ theme }) => theme.cart.checkoutBg};
+	transition: background-color 0.5s ease-in-out, opacity 0.75s ease-in,
+		right 0.75s ease-in;
 
 	section {
 		display: flex;
@@ -121,9 +122,10 @@ const Checkout = styled(CheckoutS)`
 		font-size: 1.2rem;
 		margin: 0;
 		padding: 0.62rem 1rem;
-		background-color: #cbd5e1;
+		background-color: ${({ theme }) => theme.cart.cartBg};
+		transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
 		text-align: center;
-		color: #1e293b;
+		color: ${({ theme }) => theme.cart.textColors};
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -140,23 +142,31 @@ const Checkout = styled(CheckoutS)`
 		position: absolute;
 		right: 1rem;
 		cursor: pointer;
-		fill: #1e293b;
+		fill: ${({ theme }) => theme.cart.textColors};
+		transition: fill 0.5s ease-in-out;
 	}
 
 	h4 {
 		font-size: 7rem;
 		text-align: center;
+		color: ${({ theme }) => theme.cart.textColors};
+		transition: color 0.5s ease-in-out;
 	}
 
 	h5 {
 		text-align: center;
+		color: ${({ theme }) => theme.cart.textColors};
+		transition: color 0.5s ease-in-out;
 	}
 
 	h6 {
 		padding: 0.6rem 0;
-		color: #1e293b;
+		color: ${({ theme }) => theme.cart.textColors};
 		text-align: center;
 		font-size: 1rem;
+		background-color: ${({ theme }) => theme.cart.subtotalBg};
+		transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+		width: 100%;
 	}
 
 	.check-btn-center {

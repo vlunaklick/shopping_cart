@@ -74,12 +74,12 @@ const HomeShow = styled(HomeShowS)`
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		transition: background-image 0.5s ease-in, color 0.5s ease-in;
+		transition: background-image 0.5s ease-in, color 0.5s ease-in,
+			box-shadow 0.5s ease-in;
 	}
 
 	.main-home-panel-left-btn:hover {
-		background-color: #cbd5e1;
-		box-shadow: 0 0 5px #a6b0bd;
+		box-shadow: ${({ theme }) => theme.mainIndex.buttonShadow};
 	}
 
 	section {

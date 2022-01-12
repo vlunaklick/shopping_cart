@@ -9,6 +9,17 @@ export const ligthTheme = {
 		bgColor: '#186FAF',
 		button: 'linear-gradient(to right, #2193b0, #6dd5ed)',
 		buttonText: '#fff',
+		buttonShadow: '0 0 2px rgba(0, 0, 0, 0.5)',
+	},
+	cart: {
+		checkoutBg: '#68BEB0',
+		subtotalBg: '#48ABAE',
+		cartBg: '#29849D',
+		textColors: '#000',
+	},
+	goUp: {
+		bgColor: '#07347D',
+		textColor: '#CCEBD4',
 	},
 }
 
@@ -22,6 +33,17 @@ export const darkTheme = {
 		svg: 'dark',
 		bgColor: '#1f1f1f',
 		button: 'linear-gradient(to right, #3ca55c, #b5ac49)',
-		buttonText: '#fff',
+		buttonText: '#1f1f1f',
+		buttonShadow: '0 0 2px rgba(255, 255, 255, 0.5)',
+	},
+	cart: {
+		checkoutBg: '#717171',
+		subtotalBg: '#515151',
+		cartBg: '#323232',
+		textColors: '#fff',
+	},
+	goUp: {
+		bgColor: '#101010',
+		textColor: '#D0D0D0',
 	},
 }

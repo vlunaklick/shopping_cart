@@ -25,7 +25,7 @@ function GoUpS(props) {
 }
 
 const GoUp = styled(GoUpS)`
-	background-color: #475569;
+	background-color: ${({ theme }) => theme.goUp.bgColor};
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -38,15 +38,13 @@ const GoUp = styled(GoUpS)`
 	-webkit-box-shadow: rgba(0, 0, 0, 0.8) 0px 0 2px;
 	-moz-box-shadow: rgba(0, 0, 0, 0.8) 0 0 2px;
 	box-shadow: rgba(0, 0, 0, 0.8) 0 0 2px;
-	transition: bottom 0.5s ease-in;
+	transition: bottom 0.5s ease-in, background-color 0.5s ease-in;
 	transform: translate(-50%);
 
 	svg {
 		transform: rotate(-90deg);
-		fill: white;
-	}
-	svg:hover {
-		background-color: #334155;
+		fill: ${({ theme }) => theme.goUp.textColor};
+		transition: fill 0.5s ease-in;
 	}
 `
 
