@@ -62,7 +62,7 @@ function ShopMainS({
 					<div
 						className='main-shop-navigator-products-menu-btn'
 						onClick={() => clickear()}>
-						<svg viewBox='0 0 100 80' width='25' height='25'>
+						<svg viewBox='0 0 100 80' width='25' height='25' className='svgNav'>
 							<rect width='100' height='20'></rect>
 							<rect y='30' width='100' height='20'></rect>
 							<rect y='60' width='100' height='20'></rect>
@@ -229,11 +229,20 @@ const ShopMain = styled(ShopMainS)`
 			right: 0;
 			transform: translate(-60%);
 		}
+		.svgNav {
+			transform: ${props =>
+				props.clickeado ? 'rotate(-90deg)' : 'rotate(0deg)'};
+			transition: transform 0.3s ease-in;
+		}
+
 		header {
 			width: 100%;
 			padding: 0.6rem 0;
 			z-index: 2;
 			display: flex;
+			box-shadow: ${props =>
+				props.clickeado ? '' : '0 1px 2px 0 rgb(0 0 0 / 0.05)'};
+			transition: background-color 0.5s ease-in, box-shadow 0.5s ease-in;
 		}
 		.main-shop-navigator {
 			justify-content: center;

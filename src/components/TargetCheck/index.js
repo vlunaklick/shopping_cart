@@ -60,19 +60,23 @@ function TargetCheckL(props) {
 }
 
 const TargetCheck = styled(TargetCheckL)`
-	filter: drop-shadow(0px 0.4px 0.5px hsl(210deg 12% 60% / 0.34));
+	border: ${({ theme }) => `2px solid ${theme.target.borderColor}`};
+	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1),
+		0px 1px 2px 0px rgba(0, 0, 0, 0.06);
+	transition: border 0.5s ease-in;
 	flex-direction: column;
+	border-radius: 0.3rem;
 
 	.target-top-part {
 		width: 17.5rem;
 		height: 17.5rem;
 		background-color: ${({ theme }) => theme.target.targetTopBg};
-		border-top-left-radius: 0.313rem;
-		border-top-right-radius: 0.313rem;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		transition: background-color 0.5s ease-in;
+		border-top-left-radius: 0.15rem;
+		border-top-right-radius: 0.15rem;
 	}
 	img {
 		width: 90%;
@@ -100,8 +104,6 @@ const TargetCheck = styled(TargetCheckL)`
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
-		border-bottom-left-radius: 0.3125rem;
-		border-bottom-right-radius: 0.3125rem;
 		transition: background-color 0.5s ease-in;
 	}
 	.target-bottom-check-part-price {

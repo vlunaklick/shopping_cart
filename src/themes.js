@@ -13,9 +13,9 @@ export const lightTheme = {
 		bgColorSvg: '#0a588c',
 	},
 	cart: {
-		checkoutBg: '#68BEB0',
-		subtotalBg: '#48ABAE',
-		cartBg: '#29849D',
+		checkoutBg: '#F0F4F8',
+		subtotalBg: '#2680C2',
+		cartBg: '#186FAF',
 		textColors: '#000',
 	},
 	goUp: {
@@ -23,20 +23,21 @@ export const lightTheme = {
 		textColor: '#CCEBD4',
 	},
 	shop: {
-		bgColor: '#fff',
+		bgColor: '#F8FAFC',
 		headerNormal: '#e2e8f0',
 		hiperColor: '#1e293b',
 		bgActivHiper: '#d1d7df',
-		headerBg: '#cbd5e1',
+		headerBg: '#F1F5F9',
 		navColor: '#1E293B',
 	},
 	target: {
-		targetTopBg: '#cbd5e1',
+		targetTopBg: '#fff',
 		colorP: '#1F1F1F',
-		targetBottomBg: '#94a3b8',
+		targetBottomBg: '#e2e8f0',
 		targetBottomButton: '#f1f5f9',
 		targetBootomButtonHover: 'rgb(195, 210, 223)',
 		svgColor: '#1F1F1F',
+		borderColor: '#e2e8f0',
 	},
 	targetCheck: {
 		targetTopBg: '#cbd5e1',
@@ -87,5 +88,6 @@ export const darkTheme = {
 		targetBottomButton: '#3D3D3D',
 		targetBootomButtonHover: '#1F1F1F',
 		svgColor: '#f8fafc',
+		borderColor: '#5B5B5B',
 	},
 }

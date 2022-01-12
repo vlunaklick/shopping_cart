@@ -180,9 +180,9 @@ const Checkout = styled(CheckoutS)`
 		height: 3rem;
 		font-size: 0.938rem;
 		font-weight: 800;
-		background-color: #d2ddf7;
-		color: #1e293b;
-		transition: 0.25s;
+		background-color: #f0b429;
+		color: #000;
+		transition: background-color 0.25s ease-in, box-shadow 0.25s ease-in;
 		cursor: pointer;
 		display: flex;
 		justify-content: center;
@@ -192,8 +192,9 @@ const Checkout = styled(CheckoutS)`
 	}
 
 	.check-btn:hover {
-		background-color: #b9c0d3;
-		box-shadow: 0 0 2px #00000069;
+		background-color: #de911d;
+		box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1),
+			0px 1px 2px 0px rgba(0, 0, 0, 0.06);
 	}
 
 	@media (max-width: 830px) {
