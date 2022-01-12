@@ -1,22 +1,20 @@
 {
   "files": {
     "main.css": "/shopping_cart/static/css/main.869457d5.chunk.css",
-    "main.js": "/shopping_cart/static/js/main.a3c6229b.chunk.js",
-    "main.js.map": "/shopping_cart/static/js/main.a3c6229b.chunk.js.map",
+    "main.js": "/shopping_cart/static/js/main.77e72f26.chunk.js",
+    "main.js.map": "/shopping_cart/static/js/main.77e72f26.chunk.js.map",
     "runtime-main.js": "/shopping_cart/static/js/runtime-main.8dbd0ab6.js",
     "runtime-main.js.map": "/shopping_cart/static/js/runtime-main.8dbd0ab6.js.map",
     "static/js/2.ccb2afcf.chunk.js": "/shopping_cart/static/js/2.ccb2afcf.chunk.js",
     "static/js/2.ccb2afcf.chunk.js.map": "/shopping_cart/static/js/2.ccb2afcf.chunk.js.map",
     "index.html": "/shopping_cart/index.html",
     "static/css/main.869457d5.chunk.css.map": "/shopping_cart/static/css/main.869457d5.chunk.css.map",
-    "static/js/2.ccb2afcf.chunk.js.LICENSE.txt": "/shopping_cart/static/js/2.ccb2afcf.chunk.js.LICENSE.txt",
-    "static/media/VectorBlue.90703a09.png": "/shopping_cart/static/media/VectorBlue.90703a09.png",
-    "static/media/VectorDark.05a2e447.png": "/shopping_cart/static/media/VectorDark.05a2e447.png"
+    "static/js/2.ccb2afcf.chunk.js.LICENSE.txt": "/shopping_cart/static/js/2.ccb2afcf.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.8dbd0ab6.js",
     "static/js/2.ccb2afcf.chunk.js",
     "static/css/main.869457d5.chunk.css",
-    "static/js/main.a3c6229b.chunk.js"
+    "static/js/main.77e72f26.chunk.js"
   ]
 }
