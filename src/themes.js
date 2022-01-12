@@ -21,6 +21,14 @@ export const ligthTheme = {
 		bgColor: '#07347D',
 		textColor: '#CCEBD4',
 	},
+	shop: {
+		bgColor: '#fff',
+		headerNormal: '#e2e8f0',
+		hiperColor: '#1e293b',
+		bgActivHiper: '#d1d7df',
+		headerBg: '#cbd5e1',
+		navColor: '#1E293B',
+	},
 }
 
 export const darkTheme = {
@@ -45,5 +53,13 @@ export const darkTheme = {
 	goUp: {
 		bgColor: '#101010',
 		textColor: '#D0D0D0',
+	},
+	shop: {
+		bgColor: '#1f1f1f',
+		headerNormal: '#5B5B5B',
+		hiperColor: '#fff',
+		bgActivHiper: '#3D3D3D',
+		headerBg: '#1F1F1F',
+		navColor: '#fff',
 	},
 }

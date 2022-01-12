@@ -131,7 +131,8 @@ const ShopMain = styled(ShopMainS)`
 	.main-shop-navigator {
 		display: flex;
 		flex-direction: column;
-		background-color: #e2e8f0;
+		background-color: ${({ theme }) => theme.shop.headerNormal};
+		transition: background-color 0.5s ease-in;
 		min-width: 13.75rem;
 	}
 
@@ -142,6 +143,8 @@ const ShopMain = styled(ShopMainS)`
 		gap: 2rem;
 		padding: 1rem 0;
 		width: 100%;
+		background-color: ${({ theme }) => theme.shop.bgColor};
+		transition: background-color 0.5s ease-in;
 	}
 
 	ul {
@@ -162,40 +165,46 @@ const ShopMain = styled(ShopMainS)`
 	}
 
 	.main-shop-navigator-list-option-hiperlink {
-		color: #1e293b;
+		color: ${({ theme }) => theme.shop.hiperColor};
 		padding: 0.4rem 0.5rem;
 		width: 15ch;
+		transition: color 0.5s ease-in;
 	}
 
 	.active {
-		color: #1e293b;
-		background-color: #d1d7df;
+		color: ${({ theme }) => theme.shop.hiperColor};
+		background-color: ${({ theme }) => theme.shop.bgActivHiper};
 		font-weight: 900;
+		transition: background-color 0.5s ease-in, color 0.5s ease-in;
 	}
 
 	h4 {
-		color: #1e293b;
+		color: ${({ theme }) => theme.shop.hiperColor};
 		font-size: 1.2rem;
+		transition: color 0.5s ease-in;
 	}
 
 	.main-shop-navigator-list-option-hiperlink:hover {
-		background-color: #d1d7df;
+		background-color: ${({ theme }) => theme.shop.bgActivHiper};
+		transition: background-color 0.5s ease-in;
 	}
 
 	header {
 		display: none;
 		font-size: 1.875rem;
 		padding: 1rem 2rem;
-		background-color: #cbd5e1;
+		background-color: ${({ theme }) => theme.shop.headerBg};
 		text-align: center;
 		justify-content: center;
 		align-items: center;
 		gap: 2rem;
+		transition: background-color 0.5s ease-in;
 	}
 
 	.main-shop-navigator-products-menu-btn {
 		display: none;
-		fill: var(--color-panel);
+		fill: ${({ theme }) => theme.shop.navColor};
+		transition: fill-color 0.5s ease-in;
 	}
 
 	@media (max-width: 949px) {
@@ -236,15 +245,18 @@ const ShopMain = styled(ShopMainS)`
 		}
 
 		.main-shop-navigator-list-option-hiperlink {
-			background-color: #e2e8f0;
+			background-color: ${({ theme }) => theme.shop.headerNormal};
 			padding: 0.5rem 0.25rem;
 			width: 100%;
+			transition: background-color 0.5s ease-in;
 		}
 		.active {
-			background-color: #d1d7df;
+			background-color: ${({ theme }) => theme.shop.bgActivHiper};
+			transition: background-color 0.5s ease-in;
 		}
 		.main-shop-navigator-list-option-hiperlink:hover {
-			background-color: #d1d7df;
+			background-color: ${({ theme }) => theme.shop.bgActivHiper};
+			transition: background-color 0.5s ease-in;
 		}
 		h4 {
 			font-size: 1rem;
