@@ -91,7 +91,6 @@ const TargetCheck = styled(TargetCheckL)`
 		transition: color 0.5s ease-in;
 	}
 	p {
-		margin-left: 0.5rem;
 		font-size: 0.6rem;
 		color: ${({ theme }) => theme.target.colorP};
 		transition: color 0.5s ease-in;
@@ -104,6 +103,7 @@ const TargetCheck = styled(TargetCheckL)`
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
+		gap: 0.3rem;
 		transition: background-color 0.5s ease-in;
 	}
 	.target-bottom-check-part-price {
@@ -112,6 +112,8 @@ const TargetCheck = styled(TargetCheckL)`
 		align-items: center;
 		color: ${({ theme }) => theme.target.colorP};
 		transition: color 0.5s ease-in;
+		gap: 0.5rem;
+		vertical-align: baseline;
 	}
 	.target-bottom-part-btn {
 		display: flex;

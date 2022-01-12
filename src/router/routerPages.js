@@ -40,6 +40,11 @@ export default function RouterPages() {
 		cambiarCarro()
 	}
 
+	const cerrarAmbos = () => {
+		setClickeado(false)
+		cerraCarro()
+	}
+
 	useEffect(() => {
 		changeCant(prevState => {
 			return Object.values(compP).reduce((t, n) => t + n)
@@ -57,7 +62,7 @@ export default function RouterPages() {
 				<Navigator
 					cant={cantP}
 					carrito={cambiarCarro}
-					cerrar={cerraCarro}
+					cerrar={cerrarAmbos}
 					themeOn={theme}
 					changeTheme={changeTheme}
 				/>
@@ -119,13 +124,13 @@ export default function RouterPages() {
 								/>
 							</Route>
 							<Route path='*'>
-								<Error404 cerrar={cerraCarro} />
+								<Error404 />
 							</Route>
 						</Switch>
 					</Route>
 
 					<Route path='*'>
-						<Error404 cerrar={cerraCarro} />
+						<Error404 />
 					</Route>
 				</Switch>
 				<Checkout

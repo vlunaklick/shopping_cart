@@ -20,7 +20,7 @@ export const lightTheme = {
 	},
 	goUp: {
 		bgColor: '#07347D',
-		textColor: '#CCEBD4',
+		textColor: '#fff',
 	},
 	shop: {
 		bgColor: '#F8FAFC',
@@ -71,7 +71,7 @@ export const darkTheme = {
 	},
 	goUp: {
 		bgColor: '#101010',
-		textColor: '#D0D0D0',
+		textColor: '#fff',
 	},
 	shop: {
 		bgColor: '#1f1f1f',
