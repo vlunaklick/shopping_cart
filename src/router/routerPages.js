@@ -10,6 +10,8 @@ import useItems from '../hooks/useItems'
 import useCarro from '../hooks/useCarro'
 import { ThemeProvider } from 'styled-components'
 import { lightTheme, darkTheme } from '../themes'
+import { seeModeLocal } from '../helpers/seeModeLocal'
+import { saveInLocal } from '../helpers/saveInLocal'
 
 export default function RouterPages() {
 	let [cantP, changeCant] = useState(0)
@@ -25,7 +27,13 @@ export default function RouterPages() {
 	let [theme, setTheme] = useState('light')
 
 	const changeTheme = () => {
-		theme === 'light' ? setTheme('dark') : setTheme('light')
+		if (theme === 'light') {
+			setTheme('dark')
+			saveInLocal('dark')
+		} else {
+			setTheme('light')
+			saveInLocal('light')
+		}
 	}
 
 	const clickear = () => {
@@ -55,6 +63,10 @@ export default function RouterPages() {
 			}, 0)
 		})
 	}, [compP])
+
+	useEffect(() => {
+		setTheme(seeModeLocal())
+	}, [])
 
 	return (
 		<Router>
