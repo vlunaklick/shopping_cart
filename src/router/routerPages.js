@@ -24,7 +24,7 @@ export default function RouterPages() {
 
 	let [clickeado, setClickeado] = useState(false)
 
-	let [theme, setTheme] = useState('light')
+	let [theme, setTheme] = useState(seeModeLocal())
 
 	const changeTheme = () => {
 		if (theme === 'light') {
@@ -63,10 +63,6 @@ export default function RouterPages() {
 			}, 0)
 		})
 	}, [compP])
-
-	useEffect(() => {
-		setTheme(seeModeLocal())
-	}, [])
 
 	return (
 		<Router>
