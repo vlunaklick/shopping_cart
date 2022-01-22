@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
-function TargetCheckL(props) {
+function TargetCheck(props) {
 	return (
 		<>
-			<div className={props.className}>
+			<TargetCheckWrapper>
 				<div className='target-top-part'>
 					<img src={props.image} alt='' />
 				</div>
@@ -54,12 +54,12 @@ function TargetCheckL(props) {
 						</div>
 					</div>
 				</div>
-			</div>
+			</TargetCheckWrapper>
 		</>
 	)
 }
 
-const TargetCheck = styled(TargetCheckL)`
+const TargetCheckWrapper = styled.div`
 	border: ${({ theme }) => `2px solid ${theme.target.borderColor}`};
 	box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.1),
 		0px 1px 2px 0px rgba(0, 0, 0, 0.06);
@@ -143,7 +143,6 @@ const TargetCheck = styled(TargetCheckL)`
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		transition: 0.2s;
 	}
 	.target-bottom-part-btn-rigth:hover,
 	.target-bottom-part-btn-left:hover {

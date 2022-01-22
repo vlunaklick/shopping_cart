@@ -134,7 +134,6 @@ const TargetWrapper = styled.section`
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		transition: 0.2s;
 	}
 	.target-bottom-part-btn-rigth:hover,
 	.target-bottom-part-btn-left:hover {
