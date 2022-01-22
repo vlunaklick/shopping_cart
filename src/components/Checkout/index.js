@@ -2,7 +2,7 @@ import styled from 'styled-components'
 import TargetCheck from '../TargetCheck'
 import { Link } from 'react-router-dom'
 
-function CheckoutS(props) {
+function Checkout(props) {
 	let tarjetasCheck = allComponents
 		.filter(item => {
 			return props.productos[item.nameU] !== 0
@@ -23,7 +23,7 @@ function CheckoutS(props) {
 
 	return (
 		<>
-			<aside className={props.className}>
+			<CheckoutWrapper valor={props.valor}>
 				<div className='check-header-container'>
 					<header>
 						<h3>CART</h3>
@@ -60,12 +60,12 @@ function CheckoutS(props) {
 				) : (
 					''
 				)}
-			</aside>
+			</CheckoutWrapper>
 		</>
 	)
 }
 
-const Checkout = styled(CheckoutS)`
+const CheckoutWrapper = styled.aside`
 	display: flex;
 	min-height: calc(100vh);
 	height: 100%;
