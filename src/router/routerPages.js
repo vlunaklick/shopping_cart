@@ -77,66 +77,23 @@ export default function RouterPages() {
 					changeTheme={changeTheme}
 				/>
 				<Switch>
-					<Route exact path='/shopping_cart/'>
+					<Route path='/shopping_cart/'>
 						<HomeShow cerrar={cerraCarro} themeOn={theme} />
 					</Route>
 
-					<Route path='/shop'>
-						<Switch>
-							<Route path='/shop/all'>
-								<ShopMain
-									muestra='all'
-									sumar={addOneP}
-									restar={resOneP}
-									clickear={clickear}
-									setClickeado={setClickeado}
-									clickeado={clickeado}
-								/>
-							</Route>
-							<Route path='/shop/motherboards'>
-								<ShopMain
-									muestra='motherboards'
-									sumar={addOneP}
-									restar={resOneP}
-									clickear={clickear}
-									setClickeado={setClickeado}
-									clickeado={clickeado}
-								/>
-							</Route>
-							<Route path='/shop/video_card'>
-								<ShopMain
-									muestra='video_card'
-									sumar={addOneP}
-									restar={resOneP}
-									clickear={clickear}
-									setClickeado={setClickeado}
-									clickeado={clickeado}
-								/>
-							</Route>
-							<Route path='/shop/processor'>
-								<ShopMain
-									muestra='processor'
-									sumar={addOneP}
-									restar={resOneP}
-									clickear={clickear}
-									setClickeado={setClickeado}
-									clickeado={clickeado}
-								/>
-							</Route>
-							<Route path='/shop/memory'>
-								<ShopMain
-									muestra='memory'
-									sumar={addOneP}
-									restar={resOneP}
-									clickear={clickear}
-									setClickeado={setClickeado}
-									clickeado={clickeado}
-								/>
-							</Route>
-							<Route path='*'>
-								<Error404 />
-							</Route>
-						</Switch>
+					<Route path='/shop/:category'>
+						<ShopMain
+							muestra='all'
+							sumar={addOneP}
+							restar={resOneP}
+							clickear={clickear}
+							setClickeado={setClickeado}
+							clickeado={clickeado}
+						/>
+					</Route>
+
+					<Route path='*'>
+						<Error404 />
 					</Route>
 
 					<Route path='/shop/:prodId'>
@@ -147,6 +104,7 @@ export default function RouterPages() {
 						<Error404 />
 					</Route>
 				</Switch>
+
 				<Checkout
 					productos={compP}
 					totalP={totalP}

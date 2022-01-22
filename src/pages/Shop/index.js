@@ -5,17 +5,18 @@ import GoUp from '../../components/GoUp'
 import useScroll from '../../hooks/useScroll'
 import styled from 'styled-components'
 import { allComponents } from '../../allComponents'
+import { useParams } from "react-router-dom"
 
 function ShopMain({
-	muestra,
 	sumar,
 	restar,
 	clickear,
 	setClickeado,
 	clickeado,
-	className,
 }) {
 	let [showUp, isScrolled] = useScroll()
+
+	let {category} = useParams()
 
 	useEffect(() => {
 		if (showUp) setClickeado(false)
@@ -25,7 +26,7 @@ function ShopMain({
 
 	let tarjetas = allComponents
 		.filter(item => {
-			return item.category === muestra
+			return item.category === category
 		})
 		.map(function (a) {
 			return (
@@ -41,7 +42,7 @@ function ShopMain({
 			)
 		})
 
-	if (muestra === 'all') {
+	if (category === 'all') {
 		tarjetas = allComponents.map(function (a) {
 			return (
 				<Target
