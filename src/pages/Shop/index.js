@@ -24,11 +24,10 @@ function ShopMain({
 
 	window.addEventListener('scroll', isScrolled)
 
-	let tarjetas = allComponents
-		.filter(item => {
-			return item.category === category
-		})
-		.map(function (a) {
+	let tarjetas
+
+	if (category === 'all') {
+		tarjetas = allComponents.map(function (a) {
 			return (
 				<Target
 					key={a.nameU}
@@ -41,9 +40,12 @@ function ShopMain({
 				/>
 			)
 		})
-
-	if (category === 'all') {
-		tarjetas = allComponents.map(function (a) {
+	} else {
+		tarjetas = allComponents
+		.filter(item => {
+			return item.category === category
+		})
+		.map(function (a) {
 			return (
 				<Target
 					key={a.nameU}
