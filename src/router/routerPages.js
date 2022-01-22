@@ -135,6 +135,9 @@ export default function RouterPages() {
 							<Route path='*'>
 								<Error404 />
 							</Route>
+							<Route exact path='/shop/:id'>
+								<h1>ID</h1>
+							</Route>
 						</Switch>
 					</Route>
 
