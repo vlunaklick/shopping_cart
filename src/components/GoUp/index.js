@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 
-function GoUpS(props) {
+function GoUp(props) {
 	return (
 		<>
-			<span
-				className={props.className}
+			<GoUpStyled
+				show={props.show}
 				onClick={() =>
 					window.scrollTo({
 						top: 0,
@@ -19,12 +19,12 @@ function GoUpS(props) {
 					viewBox='0 0 24 24'>
 					<path d='M24 12l-10-10v7h-14v6h14v7z' />
 				</svg>
-			</span>
+			</GoUpStyled>
 		</>
 	)
 }
 
-const GoUp = styled(GoUpS)`
+const GoUpStyled = styled.span`
 	background-color: ${({ theme }) => theme.goUp.bgColor};
 	display: flex;
 	align-items: center;
