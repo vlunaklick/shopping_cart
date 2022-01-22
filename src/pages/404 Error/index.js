@@ -12,16 +12,18 @@ function Error404S({ className }) {
 }
 
 const Error404 = styled(Error404S)`
-	background-color: #f1f5f9;
+	background-color: ${({theme})=> theme.shop.bgColor};
 	min-height: calc(100vh - 5.813rem);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+	transition: background-color .5s ease-in;
 
 	h1,
 	p {
-		color: #000;
+		color: ${({theme})=> theme.shop.navColor};
+		transition: color .5s ease-in;
 	}
 
 	h1 {
@@ -31,6 +33,10 @@ const Error404 = styled(Error404S)`
 	p {
 		font-size: 2rem;
 		text-align: center;
+	}
+
+	@media (max-width: 949px){
+		min-height: calc(100vh - 3.0625rem);
 	}
 `
 
