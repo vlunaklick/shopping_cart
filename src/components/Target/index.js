@@ -109,6 +109,7 @@ const TargetWrapper = styled.section`
 	.target-bottom-part-btn {
 		display: flex;
 		justify-content: center;
+		width: 80%;
 	}
 	.target-bottom-part-btn-left {
 		width: 2.875rem;
