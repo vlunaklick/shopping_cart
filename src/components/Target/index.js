@@ -1,11 +1,18 @@
 import styled from 'styled-components'
+import {useHistory} from 'react-router-dom'
 
 function Target(props) {
+	const history = useHistory()
+
+	function seeDetails(){
+		history.push(`/shop/${props.id}`)
+	}
+
 	return (
 		<>
 			<TargetWrapper>
 				<div className='target-top-part'>
-					<img src={props.image} alt='' />
+					<img src={props.image} alt='' onClick={seeDetails} />
 				</div>
 				<div className='target-bottom-part'>
 					<div className='target-bottom-part-text'>
@@ -76,6 +83,7 @@ const TargetWrapper = styled.section`
 		height: 90%;
 		object-fit: cover;
 		transition: 0.5s;
+		cursor: pointer;
 	}
 	h5,
 	p {

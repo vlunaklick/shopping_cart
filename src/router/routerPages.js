@@ -12,6 +12,7 @@ import { ThemeProvider } from 'styled-components'
 import { lightTheme, darkTheme } from '../themes'
 import { seeModeLocal } from '../helpers/seeModeLocal'
 import { saveInLocal } from '../helpers/saveInLocal'
+import ProductDetails from '../pages/Product Details'
 
 export default function RouterPages() {
 	let [cantP, changeCant] = useState(0)
@@ -82,7 +83,7 @@ export default function RouterPages() {
 
 					<Route path='/shop'>
 						<Switch>
-							<Route exact path='/shop/all'>
+							<Route path='/shop/all'>
 								<ShopMain
 									muestra='all'
 									sumar={addOneP}
@@ -92,7 +93,7 @@ export default function RouterPages() {
 									clickeado={clickeado}
 								/>
 							</Route>
-							<Route exact path='/shop/motherboards'>
+							<Route path='/shop/motherboards'>
 								<ShopMain
 									muestra='motherboards'
 									sumar={addOneP}
@@ -102,7 +103,7 @@ export default function RouterPages() {
 									clickeado={clickeado}
 								/>
 							</Route>
-							<Route exact path='/shop/video_card'>
+							<Route path='/shop/video_card'>
 								<ShopMain
 									muestra='video_card'
 									sumar={addOneP}
@@ -112,7 +113,7 @@ export default function RouterPages() {
 									clickeado={clickeado}
 								/>
 							</Route>
-							<Route exact path='/shop/processor'>
+							<Route path='/shop/processor'>
 								<ShopMain
 									muestra='processor'
 									sumar={addOneP}
@@ -122,7 +123,7 @@ export default function RouterPages() {
 									clickeado={clickeado}
 								/>
 							</Route>
-							<Route exact path='/shop/memory'>
+							<Route path='/shop/memory'>
 								<ShopMain
 									muestra='memory'
 									sumar={addOneP}
@@ -135,10 +136,11 @@ export default function RouterPages() {
 							<Route path='*'>
 								<Error404 />
 							</Route>
-							<Route exact path='/shop/:id'>
-								<h1>ID</h1>
-							</Route>
 						</Switch>
+					</Route>
+
+					<Route path='/shop/:prodId'>
+						<ProductDetails/>
 					</Route>
 
 					<Route path='*'>

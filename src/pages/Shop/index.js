@@ -36,6 +36,7 @@ function ShopMain({
 					price={a.price}
 					sumar={sumar}
 					restar={restar}
+					id={a.id}
 				/>
 			)
 		})
@@ -50,6 +51,7 @@ function ShopMain({
 					price={a.price}
 					sumar={sumar}
 					restar={restar}
+					id={a.id}
 				/>
 			)
 		})
