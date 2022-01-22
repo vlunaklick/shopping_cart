@@ -81,7 +81,7 @@ export default function RouterPages() {
 						<HomeShow cerrar={cerraCarro} themeOn={theme} />
 					</Route>
 
-					<Route path='/shop/:category'>
+					<Route exact path='/shop/:category'>
 						<ShopMain
 							muestra='all'
 							sumar={addOneP}
@@ -92,11 +92,7 @@ export default function RouterPages() {
 						/>
 					</Route>
 
-					<Route path='*'>
-						<Error404 />
-					</Route>
-
-					<Route path='/shop/:prodId'>
+					<Route exact path='/shop/item/:prodId'>
 						<ProductDetails/>
 					</Route>
 

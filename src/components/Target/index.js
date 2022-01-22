@@ -5,7 +5,7 @@ function Target(props) {
 	const history = useHistory()
 
 	function seeDetails(){
-		history.push(`/shop/${props.id}`)
+		history.push(`/shop/item/${props.id}`)
 	}
 
 	return (
