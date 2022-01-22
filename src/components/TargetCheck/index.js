@@ -118,7 +118,6 @@ const TargetCheckWrapper = styled.div`
 	.target-bottom-part-btn {
 		display: flex;
 		justify-content: center;
-		width: 80%;
 	}
 	.target-bottom-part-btn-left {
 		width: 2.875rem;
@@ -160,6 +159,8 @@ const TargetCheckWrapper = styled.div`
 	}
 	svg {
 		width: 0.875rem;
+		color: ${({ theme }) => theme.target.svgColor};
+		transition: color 0.5s ease-in;
 	}
 `
 
