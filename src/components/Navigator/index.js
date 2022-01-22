@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { BsMoonFill, BsFillSunFill } from 'react-icons/bs'
 
-function NavigatorL(props) {
+function Navigator(props) {
 	return (
 		<>
-			<nav className={props.className}>
+			<NavigatorWrapper themeOn={props.themeOn}>
 				<Link
 					id='title-link'
 					to='/shopping_cart/'
@@ -50,12 +50,12 @@ function NavigatorL(props) {
 						<p>{props.cant}</p>
 					</li>
 				</ul>
-			</nav>
+			</NavigatorWrapper>
 		</>
 	)
 }
 
-const Navigator = styled(NavigatorL)`
+const NavigatorWrapper = styled.nav`
 	display: flex;
 	padding: 0.4rem 0.72657rem;
 	background-color: ${({ theme }) => theme.navigator.navBgColor};
