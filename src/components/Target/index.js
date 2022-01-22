@@ -1,9 +1,9 @@
 import styled from 'styled-components'
 
-function TargetL(props) {
+function Target(props) {
 	return (
 		<>
-			<section className={props.className}>
+			<TargetWrapper>
 				<div className='target-top-part'>
 					<img src={props.image} alt='' />
 				</div>
@@ -49,12 +49,12 @@ function TargetL(props) {
 						</div>
 					</div>
 				</div>
-			</section>
+			</TargetWrapper>
 		</>
 	)
 }
 
-const Target = styled(TargetL)`
+const TargetWrapper = styled.section`
 	border: ${({ theme }) => `2px solid ${theme.target.borderColor}`};
 	box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.05);
 	transition: border 0.5s ease-in;
