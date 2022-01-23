@@ -79,19 +79,20 @@ const ProductsDetailsWrapper = styled.div`
 		border-top-right-radius: 0.15rem;
 	}
 	img {
-		width: 90%;
-		height: 90%;
+		width: 95%;
+		height: 95%;
 		object-fit: cover;
 		transition: 0.5s;
-		cursor: pointer;
 	}
 
     .wrapper-info{
         box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.1) , 0px 1px 2px 0px rgba(0,0,0,0.06) ;
         border-radius: .5rem;
-        padding: 0.7rem;
+        padding: 1rem;
         display:flex;
+        gap: 1rem;
         background-color: ${({ theme }) => theme.target.targetBottomBg};
+        transition: background-color .5s ease-in;
     }
 
 	h4,
@@ -112,7 +113,6 @@ const ProductsDetailsWrapper = styled.div`
     .wrapper-stats{
         display: flex;
         flex-direction: column;
-        padding: 1rem;
     }
 
     .target-bottom-part {
@@ -128,29 +128,24 @@ const ProductsDetailsWrapper = styled.div`
 		display: flex;
         margin: auto 0 0 auto;
 	}
-	.target-bottom-part-btn-left {
-		width: 100px;
-		height: 63.06px;
-		border-bottom-left-radius: 0.313rem;
-		border-top-left-radius: 0.313rem;
-		background-color: ${({ theme }) => theme.target.targetBottomButton};
-		cursor: pointer;
-		transition: background-color 0.5s ease-in;
-	}
-	.target-bottom-part-btn-rigth {
-		width: 100px;
-		height: 63.06px;
-		border-bottom-right-radius: 0.313rem;
+    .target-bottom-part-btn-rigth{
+        border-bottom-right-radius: 0.313rem;
 		border-top-right-radius: 0.313rem;
-		background-color: ${({ theme }) => theme.target.targetBottomButton};
-		cursor: pointer;
-		transition: background-color 0.5s ease-in;
-	}
+    }
+    .target-bottom-part-btn-left{
+        border-bottom-left-radius: 0.313rem;
+		border-top-left-radius: 0.313rem;
+    }
 	.target-bottom-part-btn-rigth,
 	.target-bottom-part-btn-left {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+        width: 6.25rem;
+		height: 3.9413rem;
+        background-color: ${({ theme }) => theme.target.targetBottomButton};
+		cursor: pointer;
+		transition: background-color 0.5s ease-in;
 	}
 	.target-bottom-part-btn-rigth:hover,
 	.target-bottom-part-btn-left:hover {
@@ -170,16 +165,23 @@ const ProductsDetailsWrapper = styled.div`
         padding: 1rem;
 
         .target-top-part{
-            width: 17.25rem;
-		    height: 17.25rem;
+            width: 19.4375rem;
+		    height: 19.4375rem;
         }
 
         .target-bottom-part-btn{
             margin: 1rem auto 0 auto;
         }
 
+        .target-bottom-part-btn-rigth,
+	    .target-bottom-part-btn-left{
+            width: 76px;
+		    height: 42px;
+        }
         .wrapper-info{
             flex-direction: column;
+            gap: 0.3rem;
+            padding: 0.7rem;
         }
 
         h3 {
