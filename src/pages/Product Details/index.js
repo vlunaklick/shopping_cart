@@ -97,13 +97,13 @@ const ProductsDetailsWrapper = styled.div`
 
 	h4,
 	h3 {
-        text-align: left;
+        text-align: right;
 		color: ${({theme})=> theme.shop.navColor};
 		transition: color .5s ease-in;
 	}
 
 	h3 {
-		font-size: 4rem;
+		font-size: 3.2rem;
 	}
 
 	h4 {
@@ -113,6 +113,7 @@ const ProductsDetailsWrapper = styled.div`
     .wrapper-stats{
         display: flex;
         flex-direction: column;
+        width: 28rem;
     }
 
     .target-bottom-part {
@@ -182,6 +183,14 @@ const ProductsDetailsWrapper = styled.div`
             flex-direction: column;
             gap: 0.3rem;
             padding: 0.7rem;
+        }
+
+        .wrapper-stats{
+            width: auto;
+        }
+
+        h3, h4{
+            text-align: left
         }
 
         h3 {
