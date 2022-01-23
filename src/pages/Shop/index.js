@@ -174,14 +174,14 @@ const ShopMainWrapper = styled.section`
 		color: ${({ theme }) => theme.shop.hiperColor};
 		padding: 0.4rem 0.5rem;
 		width: 15ch;
-		transition: color 0.5s ease-in;
+		transition: color 0.5s ease-in, background-color 0.5s ease-in;
 	}
 
 	.active {
 		color: ${({ theme }) => theme.shop.hiperColor};
 		background-color: ${({ theme }) => theme.shop.bgActivHiper};
-		font-weight: 900;
-		transition: background-color 0.5s ease-in, color 0.5s ease-in;
+		font-weight: 800;
+		transition: background-color 0.5s ease-in, color 0.5s ease-in, letter-spacing 0.5s ease-in;
 	}
 
 	h4 {

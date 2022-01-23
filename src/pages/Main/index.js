@@ -91,9 +91,9 @@ const HomeShow = styled(HomeShowS)`
 	}
 
 	h3 {
-		font-weight: 100;
+		font-weight: 300;
 		color: #fff;
-		font-size: 2.2rem;
+		font-size: 2rem;
 	}
 
 	.main-home-panel-left-btn {
@@ -186,7 +186,7 @@ const HomeShow = styled(HomeShowS)`
 			width: 18.75rem;
 		}
 		h3 {
-			font-size: 1.25rem;
+			font-size: 1.2rem;
 		}
 	}
 `
