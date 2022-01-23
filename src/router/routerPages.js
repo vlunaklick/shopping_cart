@@ -93,7 +93,8 @@ export default function RouterPages() {
 					</Route>
 
 					<Route exact path='/shop/item/:prodId'>
-						<ProductDetails/>
+						<ProductDetails sumar={addOneP}
+							restar={resOneP}/>
 					</Route>
 
 					<Route path='*'>
